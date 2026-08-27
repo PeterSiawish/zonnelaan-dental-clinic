@@ -3,7 +3,7 @@
    attribute remains in the HTML as a no-JS fallback. */
 (function () {
   // TODO: replace with real Formspree endpoint before launch.
-  var FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/mwlkerqe";
 
   document.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("callback-form");
@@ -19,7 +19,7 @@
       { id: "field-phone", type: "phone" },
       { id: "field-patient-status", type: "required" },
       { id: "field-callback-window", type: "required" },
-      { id: "field-consent", type: "checkbox" }
+      { id: "field-consent", type: "checkbox" },
     ];
 
     function errorKeyFor(type) {
@@ -32,7 +32,9 @@
     function currentText(key) {
       if (!window.ZonnelaanI18n) return key;
       var lang = window.ZonnelaanI18n.getLang();
-      var dict = window.ZonnelaanI18n.translations[lang] || window.ZonnelaanI18n.translations.nl;
+      var dict =
+        window.ZonnelaanI18n.translations[lang] ||
+        window.ZonnelaanI18n.translations.nl;
       return dict[key] || key;
     }
 
@@ -77,7 +79,7 @@
       fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: new FormData(form)
+        body: new FormData(form),
       })
         .then(function (response) {
           if (response.ok) {
@@ -89,7 +91,8 @@
         })
         .catch(function () {
           var genericError = document.getElementById("form-generic-error");
-          if (genericError) genericError.textContent = currentText("contact.form.errorSubmit");
+          if (genericError)
+            genericError.textContent = currentText("contact.form.errorSubmit");
         })
         .finally(function () {
           if (submitBtn) submitBtn.disabled = false;
