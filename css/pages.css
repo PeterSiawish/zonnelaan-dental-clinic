@@ -1,0 +1,95 @@
+/* ===== Home ===== */
+.hero {
+  background: linear-gradient(180deg, var(--bg), var(--card));
+  padding: var(--space-6) 0;
+}
+.hero-inner {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+.hero-art {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+@media (min-width: 900px) {
+  .hero-inner { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.highlight-card h3 { margin-bottom: var(--space-2); }
+.highlight-card p { flex-grow: 1; }
+
+/* ===== Team ===== */
+.avatar-1 { background: var(--primary); }
+.avatar-2 { background: #2e7d32; }
+.avatar-3 { background: #7b1fa2; }
+.avatar-4 { background: #ef6c00; }
+
+.staff-card { text-align: center; }
+.staff-card dl {
+  text-align: left;
+  margin: var(--space-3) 0 0;
+}
+.staff-card dt {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-top: var(--space-2);
+}
+.staff-card dd { margin: 2px 0 0; }
+.staff-card .staff-role { color: var(--muted); margin-bottom: var(--space-2); }
+
+/* ===== Treatments ===== */
+.treatments-intro { max-width: 70ch; }
+
+/* ===== Rates ===== */
+.rates-section h2 { margin-top: 0; }
+.rates-note {
+  border-left: 4px solid var(--primary);
+  padding-left: var(--space-3);
+  color: var(--muted);
+}
+
+/* ===== Emergency ===== */
+.emergency-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+@media (min-width: 900px) {
+  .emergency-grid { grid-template-columns: 1fr 1fr; }
+}
+.emergency-grid h3 { margin-top: 0; }
+.symptom-list li { margin-bottom: var(--space-2); }
+
+/* ===== Contact ===== */
+.contact-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+@media (min-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+}
+.contact-card-list { list-style: none; padding: 0; margin: 0 0 var(--space-4); }
+.contact-card-list li {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+.contact-card-list li:last-child { border-bottom: 0; }
+.contact-card-list dt { font-weight: 700; min-width: 90px; flex-shrink: 0; }
