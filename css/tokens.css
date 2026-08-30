@@ -9,6 +9,14 @@
   --muted: #6b7280;
   --border: #e6eaf0;
 
+  /* Secondary (grey) palette — mirrors the --primary/--primary-dark pattern,
+     derived from the existing --muted/--border/--bg family so it reads as
+     one cohesive design rather than a second theme. */
+  --secondary: #6b7280;
+  --secondary-dark: #4b5563;
+  --secondary-bg: #eef0f4;
+  --secondary-border: #d7dce3;
+
   /* Supporting tokens */
   --success: #2e7d32;
   --success-bg: #e8f5e9;
@@ -31,7 +39,6 @@
   --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --container-max: 1140px;
   --header-height: 72px;
-  --mobile-cta-height: 60px;
 }
 
 /* Breakpoints used across CSS (documented, not usable as CSS vars in media queries):

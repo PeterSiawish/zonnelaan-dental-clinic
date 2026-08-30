@@ -34,12 +34,10 @@
         <li><a class="nav-link" data-i18n="nav.treatments" href="treatments.html">Behandelingen</a></li>
         <li><a class="nav-link" data-i18n="nav.rates" href="rates.html">Tarieven</a></li>
         <li><a class="nav-link" data-i18n="nav.emergency" href="emergency.html">Spoed</a></li>
-        <li><a class="nav-link" data-i18n="nav.contact" href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <span class="status-badge badge-accepting" data-i18n="badge.accepting">Wij nemen nieuwe patiënten aan</span>
       <div class="lang-toggle" role="group" aria-label="Taal / Language">
         <button type="button" class="lang-btn" data-lang-btn="nl" aria-pressed="true">NL</button>
         <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
@@ -58,7 +56,6 @@
       <li><a class="nav-link" data-i18n="nav.treatments" href="treatments.html">Behandelingen</a></li>
       <li><a class="nav-link" data-i18n="nav.rates" href="rates.html">Tarieven</a></li>
       <li><a class="nav-link" data-i18n="nav.emergency" href="emergency.html">Spoed</a></li>
-      <li><a class="nav-link" data-i18n="nav.contact" href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -71,7 +68,7 @@
         <h1 data-i18n="home.hero.title">Welkom bij Tandartsenpraktijk Zonnelaan</h1>
         <p data-i18n="home.hero.subtitle">Persoonlijke, moderne tandheelkundige zorg voor het hele gezin in Groningen.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html" data-i18n="home.hero.ctaPrimary">Maak een afspraak</a>
+          <a class="btn btn-primary" href="#location" data-i18n="home.hero.ctaPrimary">Maak een afspraak</a>
           <a class="btn btn-secondary" href="treatments.html" data-i18n="home.hero.ctaSecondary">Bekijk behandelingen</a>
         </div>
       </div>
@@ -79,79 +76,118 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="location">
     <div class="container">
-      <h2 data-i18n="home.intro.title">Fijne tandheelkunde, dichtbij huis</h2>
-      <p data-i18n="home.intro.text">Bij Tandartsenpraktijk Zonnelaan combineren we vakkundige zorg met een persoonlijke, rustige aanpak. Of u nu voor een reguliere controle komt of wat extra begeleiding nodig heeft: ons team staat voor u klaar.</p>
+      <div class="location-grid">
+        <div class="location-info">
+          <h2 data-i18n="home.location.title">Bezoek of bel ons</h2>
+          <p data-i18n="home.location.subtitle">Zonnelaan 32 in Groningen — goed bereikbaar per fiets, auto en openbaar vervoer.</p>
+
+          <dl class="location-details">
+            <li>
+              <dt data-i18n="home.location.addressLabel">Adres</dt>
+              <dd>Zonnelaan 32, 9742 BM Groningen</dd>
+            </li>
+            <li>
+              <dt data-i18n="home.location.phoneLabel">Telefoon</dt>
+              <dd><a href="tel:0508795127">050-8795127</a></dd>
+            </li>
+            <li>
+              <dt data-i18n="home.location.emailLabel">E-mail</dt>
+              <dd><a href="mailto:info@tandartss.nl">info@tandartss.nl</a></dd>
+            </li>
+            <li>
+              <dt data-i18n="home.location.hoursLabel">Openingstijden</dt>
+              <dd>
+                <span data-i18n="footer.hours.weekdays">Ma–Vr: 08:30–17:00</span><br>
+                <span data-i18n="footer.hours.weekend">Za–Zo: Gesloten</span>
+              </dd>
+            </li>
+          </dl>
+
+          <div class="location-actions">
+            <a class="btn btn-primary" href="tel:0508795127" data-i18n="common.callNow">Bel nu</a>
+            <a class="btn btn-emergency" href="emergency.html" data-i18n="common.emergency">Spoed</a>
+          </div>
+        </div>
+
+        <div class="location-map">
+          <iframe class="map-embed" src="https://www.google.com/maps?q=Zonnelaan+32,+9742+BM+Groningen&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kaart naar Zonnelaan 32, Groningen" data-i18n-attr="title:home.location.mapTitle"></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" id="services">
     <div class="container">
-      <h2 data-i18n="home.highlights.title">Alles wat u wilt weten</h2>
+      <h2 data-i18n="home.services.title">Onze zorg</h2>
+      <p data-i18n="home.services.subtitle">Van preventie tot specialistische behandelingen — helder uitgelegd.</p>
+
       <div class="card-grid card-grid--4">
-        <a class="card highlight-card" href="team.html">
-          <h3 data-i18n="home.highlights.team.title">Ons Team</h3>
-          <p data-i18n="home.highlights.team.text">Maak kennis met onze tandartsen en mondhygiënisten.</p>
+        <a class="card service-card" href="treatments.html#cat1">
+          <h3 data-i18n="treatments.cat1.title">Preventieve Zorg</h3>
+          <p data-i18n="home.services.cat1.text">Periodieke controles, gebitsreiniging en preventieve begeleiding om problemen voor te blijven.</p>
           <span data-i18n="common.readMore">Lees meer</span>
         </a>
-        <a class="card highlight-card" href="treatments.html">
-          <h3 data-i18n="home.highlights.treatments.title">Behandelingen</h3>
-          <p data-i18n="home.highlights.treatments.text">Van controle tot implantologie — helder uitgelegd.</p>
+        <a class="card service-card" href="treatments.html#cat2">
+          <h3 data-i18n="treatments.cat2.title">Restauratief & Cosmetisch</h3>
+          <p data-i18n="home.services.cat2.text">Vullingen, kronen, bruggen en cosmetische behandelingen zoals bleken en facings.</p>
           <span data-i18n="common.readMore">Lees meer</span>
         </a>
-        <a class="card highlight-card" href="emergency.html">
-          <h3 data-i18n="home.highlights.emergency.title">Spoedgevallen</h3>
-          <p data-i18n="home.highlights.emergency.text">Weten wat u moet doen bij een tandheelkundige noodsituatie.</p>
+        <a class="card service-card" href="treatments.html#cat3">
+          <h3 data-i18n="treatments.cat3.title">Specialistische Zorg</h3>
+          <p data-i18n="home.services.cat3.text">Wortelkanaalbehandelingen, parodontologie en implantologie voor complexere zorg.</p>
           <span data-i18n="common.readMore">Lees meer</span>
         </a>
-        <a class="card highlight-card" href="rates.html">
-          <h3 data-i18n="home.highlights.rates.title">Tarieven</h3>
-          <p data-i18n="home.highlights.rates.text">Vaste NZa-tarieven en informatie over vergoedingen.</p>
+        <a class="card service-card" href="treatments.html#cat4">
+          <h3 data-i18n="treatments.cat4.title">Angstpatiënten (Angsttandarts)</h3>
+          <p data-i18n="home.services.cat4.text">Rustige, stapsgewijze begeleiding voor patiënten die extra geruststelling nodig hebben.</p>
           <span data-i18n="common.readMore">Lees meer</span>
         </a>
+      </div>
+
+      <div class="explore-links">
+        <a class="explore-link" href="rates.html" data-i18n="home.explore.rates">Bekijk tarieven & vergoedingen</a>
+        <a class="explore-link" href="emergency.html" data-i18n="home.explore.emergency">Wat te doen bij een spoedgeval</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="team">
     <div class="container">
-      <h2 data-i18n="home.testimonials.title">Wat patiënten zeggen</h2>
-      <!-- PLACEHOLDER TESTIMONIALS: fictional, replace with real reviews before launch -->
-      <div class="card-grid card-grid--3">
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="5 van de 5 sterren">★★★★★</div>
-          <p data-i18n="home.testimonial1.text">Heldere uitleg, vriendelijk team en nooit lang wachten. Echt een aanrader!</p>
-          <p class="testimonial-author" data-i18n="home.testimonial1.author">J. van der Berg</p>
+      <h2 data-i18n="home.team.title">Ons Team</h2>
+      <p data-i18n="home.team.subtitle">Maak kennis met onze tandartsen en mondhygiënisten.</p>
+
+      <div class="card-grid card-grid--4">
+        <div class="card staff-card">
+          <div class="avatar avatar-1" aria-hidden="true">SV</div>
+          <h3>Drs. Sanne de Vries</h3>
+          <p class="staff-role" data-i18n="team.staff1.role">Tandarts / Dentist</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="5 van de 5 sterren">★★★★★</div>
-          <p data-i18n="home.testimonial2.text">Als angstpatiënt voelde ik me hier voor het eerst echt op mijn gemak.</p>
-          <p class="testimonial-author" data-i18n="home.testimonial2.author">M. Hendriks</p>
+        <div class="card staff-card">
+          <div class="avatar avatar-2" aria-hidden="true">MJ</div>
+          <h3>Drs. Mark Jansen</h3>
+          <p class="staff-role" data-i18n="team.staff2.role">Tandarts / Angsttandarts</p>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars" aria-label="5 van de 5 sterren">★★★★★</div>
-          <p data-i18n="home.testimonial3.text">Snel geholpen met een spoedgeval in het weekend, top service.</p>
-          <p class="testimonial-author" data-i18n="home.testimonial3.author">R. Postma</p>
+        <div class="card staff-card">
+          <div class="avatar avatar-3" aria-hidden="true">LB</div>
+          <h3>Lisa Bakker</h3>
+          <p class="staff-role" data-i18n="team.staff3.role">Mondhygiënist / Dental Hygienist</p>
+        </div>
+        <div class="card staff-card">
+          <div class="avatar avatar-4" aria-hidden="true">FE</div>
+          <h3>Drs. Fatima El Amrani</h3>
+          <p class="staff-role" data-i18n="team.staff4.role">Tandarts / Implantologie</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <h2 data-i18n="home.map.title">Vind ons in Groningen</h2>
-      <p data-i18n="home.map.text">Zonnelaan 32, 9742 BM Groningen — goed bereikbaar per fiets, auto en openbaar vervoer.</p>
-      <a class="btn btn-secondary" href="contact.html" data-i18n="home.map.link">Bekijk contactgegevens</a>
+      <div class="section-cta">
+        <a class="btn btn-secondary" href="team.html" data-i18n="home.team.cta">Maak kennis met het hele team</a>
+      </div>
     </div>
   </section>
 
 </main>
-
-<div class="mobile-cta-bar">
-  <a class="cta-call" href="tel:0508795127" data-i18n="common.callNow">Bel nu</a>
-  <a class="cta-emergency" href="emergency.html" data-i18n="common.emergency">Spoed</a>
-</div>
 
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -172,16 +208,7 @@
         <li><a data-i18n="nav.treatments" href="treatments.html">Behandelingen</a></li>
         <li><a data-i18n="nav.rates" href="rates.html">Tarieven</a></li>
         <li><a data-i18n="nav.emergency" href="emergency.html">Spoed</a></li>
-        <li><a data-i18n="nav.contact" href="contact.html">Contact</a></li>
       </ul>
-    </div>
-    <div>
-      <h3 data-i18n="footer.trustTitle">Keurmerken</h3>
-      <div class="trust-badges">
-        <span class="trust-badge-chip">KNMT</span>
-        <span class="trust-badge-chip">KRT</span>
-      </div>
-      <p data-i18n="footer.trust.text">Geregistreerd bij KNMT en KRT</p>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -190,9 +217,7 @@
 </footer>
 
 <script src="js/i18n.js" defer></script>
-<script src="js/status-badge.js" defer></script>
 <script src="js/nav.js" defer></script>
 <script src="js/accordion.js" defer></script>
-<script src="js/form.js" defer></script>
 </body>
 </html>

@@ -15,31 +15,11 @@
 }
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-dark); color: #fff; }
-.btn-secondary { background: transparent; border-color: var(--primary); color: var(--primary); }
-.btn-secondary:hover { background: var(--primary); color: #fff; }
+.btn-secondary { background: var(--secondary-bg); border-color: var(--secondary-border); color: var(--secondary-dark); }
+.btn-secondary:hover { background: var(--secondary-dark); border-color: var(--secondary-dark); color: #fff; }
 .btn-emergency { background: var(--danger); color: #fff; }
 .btn-emergency:hover { background: #a31f1f; color: #fff; }
 .btn-block { width: 100%; }
-
-/* ===== Status badge ===== */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.status-badge::before {
-  content: "";
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: currentColor;
-}
-.badge-accepting { background: var(--success-bg); color: var(--success); }
-.badge-not-accepting { background: var(--border); color: var(--muted); }
 
 /* ===== Cards & grids ===== */
 .card {
@@ -62,7 +42,7 @@
   .card-grid--3 { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ===== Placeholder ribbon (staff, testimonials, emergency after-hours) ===== */
+/* ===== Placeholder ribbon (staff, emergency after-hours) ===== */
 .placeholder-ribbon {
   display: inline-block;
   background: #fff3cd;
@@ -175,32 +155,6 @@
   border-radius: var(--radius);
   padding: var(--space-3);
   margin-top: var(--space-3);
-}
-
-/* ===== Testimonials ===== */
-.testimonial-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  box-shadow: var(--shadow-sm);
-}
-.testimonial-stars { color: #f5a623; letter-spacing: 2px; margin-bottom: var(--space-2); }
-.testimonial-author { font-weight: 700; margin-top: var(--space-2); color: var(--muted); }
-
-/* ===== Trust badges ===== */
-.trust-badges { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-.trust-badge-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--primary-dark);
 }
 
 /* ===== Map ===== */

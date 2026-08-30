@@ -16,5 +16,18 @@
         else panel.removeAttribute("hidden");
       });
     });
+
+    // Auto-expand the category linked to from the home page services section
+    // (e.g. treatments.html#preventief), since a plain anchor jump would
+    // otherwise land on a collapsed panel.
+    var hash = window.location.hash.replace("#", "");
+    var target = hash && document.getElementById(hash);
+    if (!target || !target.classList.contains("accordion-item")) return;
+    var targetHeader = target.querySelector(".accordion-header");
+    var targetPanel = target.querySelector(".accordion-panel");
+    if (targetHeader && targetPanel && targetHeader.getAttribute("aria-expanded") !== "true") {
+      targetHeader.setAttribute("aria-expanded", "true");
+      targetPanel.removeAttribute("hidden");
+    }
   });
 })();
