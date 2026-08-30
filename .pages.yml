@@ -1,0 +1,9 @@
+content:
+  - name: our_team
+    label: Meet Our Team Page
+    type: file
+    path: content/our-team.json
+    fields:
+      - name: doctor_heading
+        label: Main Doctor Name
+        type: string

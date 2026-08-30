@@ -164,7 +164,7 @@
             <!-- PLACEHOLDER STAFF DATA: replace before launch -->
             <div class="card staff-card">
               <div class="avatar avatar-1" aria-hidden="true">SV</div>
-              <h3>Drs. Sanne de Vries</h3>
+              <h3 id="doctor-name">Drs. Sanne de Vries</h3>
               <p class="staff-role" data-i18n="team.staff1.role">
                 Tandarts / Dentist
               </p>
@@ -313,5 +313,15 @@
     <script src="js/i18n.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/accordion.js" defer></script>
+    <script>
+      fetch("/content/our-team.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.doctor_heading) {
+            document.getElementById("doctor-name").textContent =
+              data.doctor_heading;
+          }
+        });
+    </script>
   </body>
 </html>
