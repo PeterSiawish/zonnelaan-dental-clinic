@@ -35,6 +35,12 @@
       "specializations": "Implantologie, Restauratieve tandheelkunde",
       "languages": "Nederlands, Engels, Arabisch",
       "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen."
+    },
+    {
+      "name": "Charles",
+      "role": "Test #1",
+      "license_type": "BIG",
+      "license_number": "1236767"
     }
   ]
 }
