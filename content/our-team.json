@@ -1,14 +1,13 @@
 {
   "doctors": [
     {
-      "name": "Drs. Peter Siawish",
+      "name": "Peter",
       "role": "Tandarts / Dentist",
       "license_type": "BIG",
       "license_number": "PLACEHOLDER-BIG-00000001",
       "specializations": "Algemene tandheelkunde, Endodontologie",
       "languages": "Nederlands, Engels",
-      "bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben.",
-      "photo": ""
+      "bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben."
     },
     {
       "name": "Drs. Mark Jansen",
@@ -17,8 +16,7 @@
       "license_number": "PLACEHOLDER-BIG-00000002",
       "specializations": "Angstbegeleiding, Cosmetische tandheelkunde",
       "languages": "Nederlands, Engels, Duits",
-      "bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken.",
-      "photo": ""
+      "bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken."
     },
     {
       "name": "Lisa Bakker",
@@ -27,8 +25,7 @@
       "license_number": "PLACEHOLDER-KRT-00000003",
       "specializations": "Parodontologie, Preventieve zorg",
       "languages": "Nederlands, Engels",
-      "bio": "Lisa helpt patiënten van jong tot oud bij het behouden van een gezond gebit door persoonlijke voorlichting en professionele reiniging.",
-      "photo": ""
+      "bio": "Lisa helpt patiënten van jong tot oud bij het behouden van een gezond gebit door persoonlijke voorlichting en professionele reiniging."
     },
     {
       "name": "Drs. Fatima El Amrani",
@@ -37,8 +34,7 @@
       "license_number": "PLACEHOLDER-BIG-00000004",
       "specializations": "Implantologie, Restauratieve tandheelkunde",
       "languages": "Nederlands, Engels, Arabisch",
-      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen.",
-      "photo": ""
+      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen."
     }
   ]
 }
