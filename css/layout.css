@@ -126,7 +126,8 @@
 .mobile-nav-panel {
   width: 100%;
   border-top: 1px solid var(--border);
-  padding: var(--space-3) 0;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
 }
 .mobile-nav-panel[hidden] { display: none; }
 .mobile-nav-panel ul {
@@ -157,7 +158,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
-  padding: var(--space-5) 0;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
 }
 .footer-grid h3 {
   color: #fff;
@@ -169,7 +171,8 @@
 .footer-grid li { margin-bottom: var(--space-1); }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.15);
-  padding: var(--space-3) 0;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
   font-size: 0.85rem;
   color: #b7c0cf;
 }

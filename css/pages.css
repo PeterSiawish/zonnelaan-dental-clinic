@@ -28,9 +28,22 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: var(--text);
+  text-decoration: none;
 }
-.service-card h3 { margin-bottom: var(--space-2); }
-.service-card p { flex-grow: 1; }
+.service-card h3 {
+  margin-bottom: var(--space-2);
+  color: var(--primary);
+  text-decoration: underline;
+}
+.service-card:hover h3,
+.service-card:focus-visible h3 { color: var(--primary-dark); }
+.service-card p { flex-grow: 1; color: var(--text); }
+.service-card > span {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+}
 
 .explore-links {
   display: flex;
