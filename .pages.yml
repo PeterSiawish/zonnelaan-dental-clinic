@@ -1,9 +1,45 @@
 content:
   - name: our_team
-    label: Meet Our Team Page
+    label: Ons Team Pagina
+    description: "Beheer hier de gegevens van elk teamlid zoals ze op de 'Ons Team' pagina verschijnen."
     type: file
     path: content/our-team.json
     fields:
-      - name: doctor_heading
-        label: Main Doctor Name
-        type: string
+      - name: doctors
+        label: Teamleden
+        type: list
+        fields:
+          - name: name
+            label: Naam
+            type: string
+          - name: role
+            label: Functie
+            type: string
+          - name: license_type
+            label: Type registratie
+            description: "BIG voor tandartsen, KRT voor mondhygiënisten"
+            type: select
+            options:
+              values: ["BIG", "KRT"]
+          - name: license_number
+            label: Registratienummer
+            type: string
+          - name: specializations
+            label: Specialisaties
+            description: "Komma-gescheiden, bijv. 'Algemene tandheelkunde, Endodontologie'"
+            type: string
+          - name: languages
+            label: Talen
+            description: "Komma-gescheiden, bijv. 'Nederlands, Engels'"
+            type: string
+          - name: bio
+            label: Samenvatting
+            type: text
+          - name: photo
+            label: Foto
+            description: "Optioneel. Zonder foto wordt een gekleurde cirkel met initialen getoond."
+            type: image
+
+media:
+  input: images/team
+  output: /images/team

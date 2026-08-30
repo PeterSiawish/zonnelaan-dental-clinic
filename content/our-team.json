@@ -1,3 +1,44 @@
 {
-  "doctor_heading": "Drs. Peter Siawish"
+  "doctors": [
+    {
+      "name": "Drs. Peter Siawish",
+      "role": "Tandarts / Dentist",
+      "license_type": "BIG",
+      "license_number": "PLACEHOLDER-BIG-00000001",
+      "specializations": "Algemene tandheelkunde, Endodontologie",
+      "languages": "Nederlands, Engels",
+      "bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben.",
+      "photo": ""
+    },
+    {
+      "name": "Drs. Mark Jansen",
+      "role": "Tandarts / Angsttandarts",
+      "license_type": "BIG",
+      "license_number": "PLACEHOLDER-BIG-00000002",
+      "specializations": "Angstbegeleiding, Cosmetische tandheelkunde",
+      "languages": "Nederlands, Engels, Duits",
+      "bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken.",
+      "photo": ""
+    },
+    {
+      "name": "Lisa Bakker",
+      "role": "Mondhygiënist / Dental Hygienist",
+      "license_type": "KRT",
+      "license_number": "PLACEHOLDER-KRT-00000003",
+      "specializations": "Parodontologie, Preventieve zorg",
+      "languages": "Nederlands, Engels",
+      "bio": "Lisa helpt patiënten van jong tot oud bij het behouden van een gezond gebit door persoonlijke voorlichting en professionele reiniging.",
+      "photo": ""
+    },
+    {
+      "name": "Drs. Fatima El Amrani",
+      "role": "Tandarts / Implantologie",
+      "license_type": "BIG",
+      "license_number": "PLACEHOLDER-BIG-00000004",
+      "specializations": "Implantologie, Restauratieve tandheelkunde",
+      "languages": "Nederlands, Engels, Arabisch",
+      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen.",
+      "photo": ""
+    }
+  ]
 }

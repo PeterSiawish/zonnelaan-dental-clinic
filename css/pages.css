@@ -89,6 +89,10 @@
 }
 .staff-card dd { margin: 2px 0 0; }
 .staff-card .staff-role { color: var(--muted); margin-bottom: var(--space-2); }
+.staff-card .staff-bio {
+  text-align: left;
+  margin: var(--space-3) 0 0;
+}
 
 /* ===== Treatments ===== */
 .treatments-intro { max-width: 70ch; }

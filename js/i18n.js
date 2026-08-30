@@ -66,30 +66,6 @@
       "team.label.specializations": "Specialisaties",
       "team.label.languages": "Talen",
 
-      "team.staff1.role": "Tandarts / Dentist",
-      "team.staff1.big": "PLACEHOLDER-BIG-00000001",
-      "team.staff1.specializations": "Algemene tandheelkunde, Endodontologie",
-      "team.staff1.languages": "Nederlands, Engels",
-      "team.staff1.bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben.",
-
-      "team.staff2.role": "Tandarts / Angsttandarts",
-      "team.staff2.big": "PLACEHOLDER-BIG-00000002",
-      "team.staff2.specializations": "Angstbegeleiding, Cosmetische tandheelkunde",
-      "team.staff2.languages": "Nederlands, Engels, Duits",
-      "team.staff2.bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken.",
-
-      "team.staff3.role": "Mondhygiënist / Dental Hygienist",
-      "team.staff3.krt": "PLACEHOLDER-KRT-00000003",
-      "team.staff3.specializations": "Parodontologie, Preventieve zorg",
-      "team.staff3.languages": "Nederlands, Engels",
-      "team.staff3.bio": "Lisa helpt patiënten van jong tot oud bij het behouden van een gezond gebit door persoonlijke voorlichting en professionele reiniging.",
-
-      "team.staff4.role": "Tandarts / Implantologie",
-      "team.staff4.big": "PLACEHOLDER-BIG-00000004",
-      "team.staff4.specializations": "Implantologie, Restauratieve tandheelkunde",
-      "team.staff4.languages": "Nederlands, Engels, Arabisch",
-      "team.staff4.bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen.",
-
       "treatments.hero.title": "Behandelingen",
       "treatments.hero.subtitle": "Heldere uitleg over onze zorg, in gewone taal.",
       "treatments.cat1.title": "Preventieve Zorg",
@@ -204,30 +180,6 @@
       "team.label.krt": "KRT number",
       "team.label.specializations": "Specializations",
       "team.label.languages": "Languages",
-
-      "team.staff1.role": "Tandarts / Dentist",
-      "team.staff1.big": "PLACEHOLDER-BIG-00000001",
-      "team.staff1.specializations": "General dentistry, Endodontics",
-      "team.staff1.languages": "Dutch, English",
-      "team.staff1.bio": "Sanne has practiced dentistry since 2012 and focuses on a calm, personal approach, ideal for patients who appreciate extra reassurance.",
-
-      "team.staff2.role": "Dentist / Anxiety care",
-      "team.staff2.big": "PLACEHOLDER-BIG-00000002",
-      "team.staff2.specializations": "Anxiety guidance, Cosmetic dentistry",
-      "team.staff2.languages": "Dutch, English, German",
-      "team.staff2.bio": "Mark specializes in supporting anxious patients and works closely with the team to make treatments as comfortable as possible.",
-
-      "team.staff3.role": "Mondhygiënist / Dental Hygienist",
-      "team.staff3.krt": "PLACEHOLDER-KRT-00000003",
-      "team.staff3.specializations": "Periodontology, Preventive care",
-      "team.staff3.languages": "Dutch, English",
-      "team.staff3.bio": "Lisa helps patients of all ages maintain healthy teeth through personalized guidance and professional cleanings.",
-
-      "team.staff4.role": "Dentist / Implantology",
-      "team.staff4.big": "PLACEHOLDER-BIG-00000004",
-      "team.staff4.specializations": "Implantology, Restorative dentistry",
-      "team.staff4.languages": "Dutch, English, Arabic",
-      "team.staff4.bio": "Fatima combines precision with a warm, approachable style of care and has a particular interest in implant treatments.",
 
       "treatments.hero.title": "Treatments",
       "treatments.hero.subtitle": "Clear explanations of our care, in plain language.",
