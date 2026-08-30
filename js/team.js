@@ -22,8 +22,10 @@
     avatar.appendChild(img);
   }
 
-  fetch("/content/our-team.json")
-    .then(function (r) { return r.json(); })
+  fetch("./content/our-team.json")
+    .then(function (r) {
+      return r.json();
+    })
     .then(function (data) {
       (data.doctors || []).forEach(function (doctor, i) {
         var prefix = CARD_PREFIXES[i];
@@ -41,7 +43,7 @@
         if (labelEl && doctor.license_type) {
           labelEl.setAttribute(
             "data-i18n",
-            doctor.license_type === "KRT" ? "team.label.krt" : "team.label.big"
+            doctor.license_type === "KRT" ? "team.label.krt" : "team.label.big",
           );
         }
       });
