@@ -160,108 +160,28 @@
             Tandartsenpraktijk Zonnelaan.
           </p>
 
-          <div class="card-grid card-grid--4">
-            <!-- Content for this card is filled in by js/team.js from content/our-team.json (editable via Pages CMS) -->
-            <div class="card staff-card">
-              <div class="avatar avatar-1" id="doctor-1-avatar" aria-hidden="true">SV</div>
-              <h3 id="doctor-1-name">Drs. Sanne de Vries</h3>
-              <p class="staff-role" id="doctor-1-role">Tandarts / Dentist</p>
-              <dl>
-                <dt id="doctor-1-license-label" data-i18n="team.label.big">
-                  BIG-nummer
-                </dt>
-                <dd id="doctor-1-license-number">PLACEHOLDER-BIG-00000001</dd>
-                <dt data-i18n="team.label.specializations">Specialisaties</dt>
-                <dd id="doctor-1-specializations">
-                  Algemene tandheelkunde, Endodontologie
-                </dd>
-                <dt data-i18n="team.label.languages">Talen</dt>
-                <dd id="doctor-1-languages">Nederlands, Engels</dd>
-              </dl>
-              <p class="staff-bio" id="doctor-1-bio">
-                Sanne is sinds 2012 werkzaam als tandarts en richt zich op een
-                persoonlijke, rustige benadering, ideaal voor patiënten die wat
-                extra geruststelling nodig hebben.
-              </p>
-            </div>
-
-            <!-- Content for this card is filled in by js/team.js from content/our-team.json (editable via Pages CMS) -->
-            <div class="card staff-card">
-              <div class="avatar avatar-2" id="doctor-2-avatar" aria-hidden="true">MJ</div>
-              <h3 id="doctor-2-name">Drs. Mark Jansen</h3>
-              <p class="staff-role" id="doctor-2-role">
-                Tandarts / Angsttandarts
-              </p>
-              <dl>
-                <dt id="doctor-2-license-label" data-i18n="team.label.big">
-                  BIG-nummer
-                </dt>
-                <dd id="doctor-2-license-number">PLACEHOLDER-BIG-00000002</dd>
-                <dt data-i18n="team.label.specializations">Specialisaties</dt>
-                <dd id="doctor-2-specializations">
-                  Angstbegeleiding, Cosmetische tandheelkunde
-                </dd>
-                <dt data-i18n="team.label.languages">Talen</dt>
-                <dd id="doctor-2-languages">Nederlands, Engels, Duits</dd>
-              </dl>
-              <p class="staff-bio" id="doctor-2-bio">
-                Mark heeft zich gespecialiseerd in de begeleiding van angstige
-                patiënten en werkt nauw samen met het team om behandelingen zo
-                comfortabel mogelijk te maken.
-              </p>
-            </div>
-
-            <!-- Content for this card is filled in by js/team.js from content/our-team.json (editable via Pages CMS) -->
-            <div class="card staff-card">
-              <div class="avatar avatar-3" id="doctor-3-avatar" aria-hidden="true">LB</div>
-              <h3 id="doctor-3-name">Lisa Bakker</h3>
-              <p class="staff-role" id="doctor-3-role">
-                Mondhygiënist / Dental Hygienist
-              </p>
-              <dl>
-                <dt id="doctor-3-license-label" data-i18n="team.label.krt">
-                  KRT-nummer
-                </dt>
-                <dd id="doctor-3-license-number">PLACEHOLDER-KRT-00000003</dd>
-                <dt data-i18n="team.label.specializations">Specialisaties</dt>
-                <dd id="doctor-3-specializations">
-                  Parodontologie, Preventieve zorg
-                </dd>
-                <dt data-i18n="team.label.languages">Talen</dt>
-                <dd id="doctor-3-languages">Nederlands, Engels</dd>
-              </dl>
-              <p class="staff-bio" id="doctor-3-bio">
-                Lisa helpt patiënten van jong tot oud bij het behouden van een
-                gezond gebit door persoonlijke voorlichting en professionele
-                reiniging.
-              </p>
-            </div>
-
-            <!-- Content for this card is filled in by js/team.js from content/our-team.json (editable via Pages CMS) -->
-            <div class="card staff-card">
-              <div class="avatar avatar-4" id="doctor-4-avatar" aria-hidden="true">FE</div>
-              <h3 id="doctor-4-name">Drs. Fatima El Amrani</h3>
-              <p class="staff-role" id="doctor-4-role">
-                Tandarts / Implantologie
-              </p>
-              <dl>
-                <dt id="doctor-4-license-label" data-i18n="team.label.big">
-                  BIG-nummer
-                </dt>
-                <dd id="doctor-4-license-number">PLACEHOLDER-BIG-00000004</dd>
-                <dt data-i18n="team.label.specializations">Specialisaties</dt>
-                <dd id="doctor-4-specializations">
-                  Implantologie, Restauratieve tandheelkunde
-                </dd>
-                <dt data-i18n="team.label.languages">Talen</dt>
-                <dd id="doctor-4-languages">Nederlands, Engels, Arabisch</dd>
-              </dl>
-              <p class="staff-bio" id="doctor-4-bio">
-                Fatima combineert precisie met een warme, toegankelijke stijl
-                van zorg en heeft een bijzondere interesse in
-                implantaatbehandelingen.
-              </p>
-            </div>
+          <div class="card-grid card-grid--auto" id="staff-grid">
+            <!-- Cards are cloned from this template and filled in by js/team.js from content/our-team.json (editable via Pages CMS) -->
+            <template id="staff-card-template">
+              <div class="card staff-card">
+                <div class="avatar" aria-hidden="true"></div>
+                <h3 class="js-name"></h3>
+                <p class="staff-role js-role"></p>
+                <dl>
+                  <dt class="js-license-label" data-i18n="team.label.big">
+                    BIG-nummer
+                  </dt>
+                  <dd class="js-license-number"></dd>
+                  <dt class="js-specializations-label" data-i18n="team.label.specializations">
+                    Specialisaties
+                  </dt>
+                  <dd class="js-specializations"></dd>
+                  <dt class="js-languages-label" data-i18n="team.label.languages">Talen</dt>
+                  <dd class="js-languages"></dd>
+                </dl>
+                <p class="staff-bio js-bio"></p>
+              </div>
+            </template>
           </div>
         </div>
       </section>

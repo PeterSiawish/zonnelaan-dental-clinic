@@ -43,4 +43,4 @@ content:
 
 media:
   input: images/team
-  output: /images/team
+  output: images/team

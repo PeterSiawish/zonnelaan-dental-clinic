@@ -40,6 +40,7 @@
 @media (min-width: 900px) {
   .card-grid--4 { grid-template-columns: repeat(4, 1fr); }
   .card-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .card-grid--auto { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 }
 
 /* ===== Placeholder ribbon (staff, emergency after-hours) ===== */
