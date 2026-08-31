@@ -41,6 +41,39 @@ content:
             description: "Optioneel. Zonder foto wordt een gekleurde cirkel met initialen getoond."
             type: image
 
+  - name: treatments
+    label: Behandelingen Pagina
+    description: "Beheer hier de categorieën en behandelingen zoals ze op de 'Behandelingen' pagina verschijnen."
+    type: file
+    path: content/treatments.json
+    fields:
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
+      - name: categories
+        label: Categorieën
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: slug
+            label: Technische naam (link-anker)
+            description: "Gebruikt voor links vanaf de homepage. Normaal gesproken hoef je dit niet te wijzigen."
+            type: string
+          - name: title
+            label: Titel
+            type: string
+          - name: intro
+            label: Introductietekst
+            type: text
+          - name: items
+            label: Behandelingen in deze categorie
+            description: "Eén regel per behandeling. Gebruik de knop om een regel toe te voegen of te verwijderen."
+            type: string
+            list: true
+
 media:
   input: images/team
   output: images/team

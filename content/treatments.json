@@ -1,0 +1,53 @@
+{
+  "subtitle": "Heldere uitleg over onze zorg, in gewone taal.",
+  "categories": [
+    {
+      "slug": "cat1",
+      "title": "Preventieve Zorg",
+      "intro": "Preventieve zorg vormt de basis van een gezond gebit. Met regelmatige controles en een goede mondhygiëne voorkomen we problemen voordat ze ontstaan.",
+      "items": [
+        "Periodieke controle",
+        "Tandsteen verwijderen (gebitsreiniging)",
+        "Fluoridebehandeling",
+        "Mondhygiëne-instructie",
+        "Sealants voor kinderen",
+        "Röntgenfoto's (diagnostisch)"
+      ]
+    },
+    {
+      "slug": "cat2",
+      "title": "Restauratief & Cosmetisch",
+      "intro": "Is er toch schade aan uw gebit, dan herstellen we dit met duurzame en esthetisch verantwoorde oplossingen. Ook voor een stralendere glimlach bent u bij ons aan het juiste adres.",
+      "items": [
+        "Composiet vullingen (tandkleurig)",
+        "Kronen en bruggen",
+        "Tandbleken",
+        "Facings (veneers)",
+        "Vervangen van oude vullingen"
+      ]
+    },
+    {
+      "slug": "cat3",
+      "title": "Specialistische Zorg",
+      "intro": "Voor complexere behandelingen werkt ons team nauw samen en verwijzen we, indien nodig, door naar een specialist voor de beste zorg.",
+      "items": [
+        "Wortelkanaalbehandeling (endodontologie)",
+        "Parodontale behandeling (tandvleesbehandeling)",
+        "Implantologie",
+        "Verwijzing kaakchirurgie indien nodig"
+      ]
+    },
+    {
+      "slug": "cat4",
+      "title": "Angstpatiënten (Angsttandarts)",
+      "intro": "Bent u angstig voor de tandarts? U bent niet de enige. Onze angsttandarts neemt de tijd om u op uw gemak te stellen en past de behandeling aan uw tempo aan.",
+      "items": [
+        "Uitgebreide intake en rustig tempo",
+        "Verdovingsopties op maat",
+        "Stap-voor-stap uitleg vooraf",
+        "Mogelijkheid tot pauzes tijdens behandeling",
+        "Begeleiding door ervaren angsttandarts (zie Ons Team)"
+      ]
+    }
+  ]
+}

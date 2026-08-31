@@ -147,171 +147,24 @@
       <section class="section">
         <div class="container">
           <h1 data-i18n="treatments.hero.title">Behandelingen</h1>
-          <p class="treatments-intro" data-i18n="treatments.hero.subtitle">
+          <p class="treatments-intro js-subtitle" data-i18n="treatments.hero.subtitle">
             Heldere uitleg over onze zorg, in gewone taal.
           </p>
 
-          <div class="accordion">
-            <div class="accordion-item" id="cat1">
-              <button
-                class="accordion-header"
-                aria-expanded="true"
-                aria-controls="panel-cat1"
-                id="header-cat1"
-              >
-                <span data-i18n="treatments.cat1.title">Preventieve Zorg</span>
-                <span class="chevron" aria-hidden="true"></span>
-              </button>
-              <div
-                class="accordion-panel"
-                id="panel-cat1"
-                role="region"
-                aria-labelledby="header-cat1"
-              >
-                <p data-i18n="treatments.cat1.intro">
-                  Preventieve zorg vormt de basis van een gezond gebit. Met
-                  regelmatige controles en een goede mondhygiëne voorkomen we
-                  problemen voordat ze ontstaan.
-                </p>
-                <ul>
-                  <li data-i18n="treatments.cat1.item1">Periodieke controle</li>
-                  <li data-i18n="treatments.cat1.item2">
-                    Tandsteen verwijderen (gebitsreiniging)
-                  </li>
-                  <li data-i18n="treatments.cat1.item3">Fluoridebehandeling</li>
-                  <li data-i18n="treatments.cat1.item4">
-                    Mondhygiëne-instructie
-                  </li>
-                  <li data-i18n="treatments.cat1.item5">
-                    Sealants voor kinderen
-                  </li>
-                  <li data-i18n="treatments.cat1.item6">
-                    Röntgenfoto's (diagnostisch)
-                  </li>
-                </ul>
+          <div class="accordion" id="treatments-accordion">
+            <!-- Categories are cloned from this template and filled in by js/treatments.js from content/treatments.json (editable via Pages CMS) -->
+            <template id="treatment-category-template">
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="js-title"></span>
+                  <span class="chevron" aria-hidden="true"></span>
+                </button>
+                <div class="accordion-panel" role="region" hidden>
+                  <p class="js-intro"></p>
+                  <ul class="js-items"></ul>
+                </div>
               </div>
-            </div>
-
-            <div class="accordion-item" id="cat2">
-              <button
-                class="accordion-header"
-                aria-expanded="false"
-                aria-controls="panel-cat2"
-                id="header-cat2"
-              >
-                <span data-i18n="treatments.cat2.title">
-                  Restauratief & Cosmetisch
-                </span>
-                <span class="chevron" aria-hidden="true"></span>
-              </button>
-              <div
-                class="accordion-panel"
-                id="panel-cat2"
-                role="region"
-                aria-labelledby="header-cat2"
-                hidden
-              >
-                <p data-i18n="treatments.cat2.intro">
-                  Is er toch schade aan uw gebit, dan herstellen we dit met
-                  duurzame en esthetisch verantwoorde oplossingen. Ook voor een
-                  stralendere glimlach bent u bij ons aan het juiste adres.
-                </p>
-                <ul>
-                  <li data-i18n="treatments.cat2.item1">
-                    Composiet vullingen (tandkleurig)
-                  </li>
-                  <li data-i18n="treatments.cat2.item2">Kronen en bruggen</li>
-                  <li data-i18n="treatments.cat2.item3">Tandbleken</li>
-                  <li data-i18n="treatments.cat2.item4">Facings (veneers)</li>
-                  <li data-i18n="treatments.cat2.item5">
-                    Vervangen van oude vullingen
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="accordion-item" id="cat3">
-              <button
-                class="accordion-header"
-                aria-expanded="false"
-                aria-controls="panel-cat3"
-                id="header-cat3"
-              >
-                <span data-i18n="treatments.cat3.title">
-                  Specialistische Zorg
-                </span>
-                <span class="chevron" aria-hidden="true"></span>
-              </button>
-              <div
-                class="accordion-panel"
-                id="panel-cat3"
-                role="region"
-                aria-labelledby="header-cat3"
-                hidden
-              >
-                <p data-i18n="treatments.cat3.intro">
-                  Voor complexere behandelingen werkt ons team nauw samen en
-                  verwijzen we, indien nodig, door naar een specialist voor de
-                  beste zorg.
-                </p>
-                <ul>
-                  <li data-i18n="treatments.cat3.item1">
-                    Wortelkanaalbehandeling (endodontologie)
-                  </li>
-                  <li data-i18n="treatments.cat3.item2">
-                    Parodontale behandeling (tandvleesbehandeling)
-                  </li>
-                  <li data-i18n="treatments.cat3.item3">Implantologie</li>
-                  <li data-i18n="treatments.cat3.item4">
-                    Verwijzing kaakchirurgie indien nodig
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="accordion-item" id="cat4">
-              <button
-                class="accordion-header"
-                aria-expanded="false"
-                aria-controls="panel-cat4"
-                id="header-cat4"
-              >
-                <span data-i18n="treatments.cat4.title">
-                  Angstpatiënten (Angsttandarts)
-                </span>
-                <span class="chevron" aria-hidden="true"></span>
-              </button>
-              <div
-                class="accordion-panel"
-                id="panel-cat4"
-                role="region"
-                aria-labelledby="header-cat4"
-                hidden
-              >
-                <p data-i18n="treatments.cat4.intro">
-                  Bent u angstig voor de tandarts? U bent niet de enige. Onze
-                  angsttandarts neemt de tijd om u op uw gemak te stellen en
-                  past de behandeling aan uw tempo aan.
-                </p>
-                <ul>
-                  <li data-i18n="treatments.cat4.item1">
-                    Uitgebreide intake en rustig tempo
-                  </li>
-                  <li data-i18n="treatments.cat4.item2">
-                    Verdovingsopties op maat
-                  </li>
-                  <li data-i18n="treatments.cat4.item3">
-                    Stap-voor-stap uitleg vooraf
-                  </li>
-                  <li data-i18n="treatments.cat4.item4">
-                    Mogelijkheid tot pauzes tijdens behandeling
-                  </li>
-                  <li data-i18n="treatments.cat4.item5">
-                    Begeleiding door ervaren angsttandarts (zie Ons Team)
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </template>
           </div>
         </div>
       </section>
@@ -365,5 +218,6 @@
     <script src="js/i18n.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/accordion.js" defer></script>
+    <script src="js/treatments.js" defer></script>
   </body>
 </html>
