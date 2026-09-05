@@ -140,6 +140,11 @@
   margin-top: 4px;
   min-height: 1em;
 }
+.form-hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
 .form-checkbox-row {
   display: flex;
   align-items: flex-start;

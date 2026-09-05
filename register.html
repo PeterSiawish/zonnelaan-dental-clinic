@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tandartsenpraktijk Zonnelaan - Spoedgevallen</title>
+    <title>Tandartsenpraktijk Zonnelaan - Inschrijven</title>
     <meta
       name="description"
-      content="Wat te doen bij een tandheelkundige noodsituatie, tijdens en buiten openingstijden."
+      content="Schrijf u in als nieuwe patiënt bij Tandartsenpraktijk Zonnelaan."
     />
     <link
       rel="icon"
@@ -46,14 +46,17 @@
               </a>
             </li>
             <li>
-              <a class="nav-link" href="register.html">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="register.html"
+              >
                 Inschrijven
               </a>
             </li>
             <li>
               <a
-                class="nav-link active"
-                aria-current="page"
+                class="nav-link"
                 href="emergency.html"
               >
                 Spoed
@@ -99,16 +102,16 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="register.html">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="register.html"
+            >
               Inschrijven
             </a>
           </li>
           <li>
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="emergency.html"
-            >
+            <a class="nav-link" href="emergency.html">
               Spoed
             </a>
           </li>
@@ -119,79 +122,113 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1>Spoedgevallen</h1>
+          <h1>Inschrijven als nieuwe patiënt</h1>
           <p>
-            Wat te doen bij acute tandheelkundige klachten.
+            Vul onderstaand formulier in om u in te schrijven bij
+            Tandartsenpraktijk Zonnelaan. Wij nemen zo snel mogelijk contact
+            met u op.
           </p>
 
-          <div class="emergency-grid">
-            <div class="callout">
-              <h3>Tijdens openingstijden</h3>
-              <p>
-                Bel direct 050-8795127 voor een spoedafspraak dezelfde dag. Wij
-                proberen u zo snel mogelijk te helpen.
-              </p>
-              <a
-                class="btn btn-primary"
-                href="tel:0508795127"
-              >
-                Bel 050-8795127
-              </a>
-            </div>
-
-            <div class="callout callout--danger">
-              <h3>Buiten openingstijden</h3>
-              <p>
-                Voor spoedeisende tandheelkundige zorg in de avond, het weekend
-                of op feestdagen kunt u terecht bij de Tandartsenpost Groningen.
-              </p>
-              <!-- PLACEHOLDER after-hours contact info: verify before launch -->
-              <p
-                class="callout callout--warning"
-              >
-                Let op: dit zijn voorlopige contactgegevens. Controleer en
-                vervang met de actuele gegevens van de tandartsenpost voordat de
-                site live gaat.
-              </p>
-              <dl>
-                <dt>
-                  Tandartsenpost Groningen (PLACEHOLDER)
-                </dt>
-                <dd>
-                  <span>
-                    Telefoon (PLACEHOLDER)
-                  </span>
-                  : PLACEHOLDER 050-000-0000
-                  <br />
-                  <span>
-                    Adres (PLACEHOLDER)
-                  </span>
-                  : PLACEHOLDER-adres, Groningen
-                </dd>
-              </dl>
-            </div>
+          <div class="form-success" id="register-success" role="status" tabindex="-1" hidden>
+            Bedankt voor uw inschrijving! Wij nemen zo snel mogelijk contact
+            met u op.
           </div>
 
-          <h2>
-            Veelvoorkomende noodsituaties
-          </h2>
-          <ul class="symptom-list">
-            <li>
-              Hevige kiespijn die niet overgaat
-            </li>
-            <li>
-              Tand eruit geslagen (bewaar vochtig, zoek binnen 1 uur hulp)
-            </li>
-            <li>
-              Zwelling van kaak of gezicht
-            </li>
-            <li>
-              Aanhoudende bloeding na een extractie
-            </li>
-            <li>
-              Losgeraakte vulling of kroon met pijnklachten
-            </li>
-          </ul>
+          <form id="register-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="first-name">Voornaam</label>
+              <input
+                class="form-input"
+                type="text"
+                id="first-name"
+                name="firstName"
+                autocomplete="given-name"
+                placeholder="Jan"
+                required
+              />
+              <p class="form-error" id="first-name-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="last-name">Achternaam</label>
+              <input
+                class="form-input"
+                type="text"
+                id="last-name"
+                name="lastName"
+                autocomplete="family-name"
+                placeholder="Jansen"
+                required
+              />
+              <p class="form-error" id="last-name-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-mailadres</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="naam@voorbeeld.nl"
+                required
+              />
+              <p class="form-error" id="email-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bsn">BSN (Burgerservicenummer)</label>
+              <input
+                class="form-input"
+                type="text"
+                id="bsn"
+                name="bsn"
+                inputmode="numeric"
+                pattern="[0-9]{8,9}"
+                maxlength="9"
+                autocomplete="off"
+                placeholder="123456789"
+                aria-describedby="bsn-hint"
+                required
+              />
+              <p class="form-hint" id="bsn-hint">8 of 9 cijfers, zonder spaties</p>
+              <p class="form-error" id="bsn-error"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Telefoonnummer</label>
+              <input
+                class="form-input"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="06-12345678"
+                aria-describedby="phone-hint"
+                required
+              />
+              <p class="form-hint" id="phone-hint">Bijv. 06-12345678 of 050-1234567</p>
+              <p class="form-error" id="phone-error"></p>
+            </div>
+
+            <div class="form-group">
+              <div class="form-checkbox-row">
+                <input type="checkbox" id="consent" name="consent" required />
+                <label for="consent">
+                  Ik ga akkoord dat mijn gegevens, inclusief BSN, worden
+                  verwerkt ten behoeve van mijn inschrijving als patiënt.
+                </label>
+              </div>
+              <p class="form-error" id="consent-error"></p>
+            </div>
+
+            <p class="form-error" id="submit-error" role="alert"></p>
+
+            <button class="btn btn-primary btn-block" type="submit">
+              Verstuur inschrijving
+            </button>
+          </form>
         </div>
       </section>
     </main>
@@ -242,6 +279,6 @@
     </footer>
 
     <script src="js/nav.js" defer></script>
-    <script src="js/accordion.js" defer></script>
+    <script src="js/register.js" defer></script>
   </body>
 </html>
