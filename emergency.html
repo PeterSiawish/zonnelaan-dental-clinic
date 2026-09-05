@@ -12,14 +12,6 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231976d2'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial'%3EZ%3C/text%3E%3C/svg%3E"
     />
-    <script>
-      (function () {
-        var lang = localStorage.getItem("zonnelaan-lang") || "nl";
-        document.documentElement.setAttribute("lang", lang);
-        if (lang === "en")
-          document.documentElement.classList.add("lang-en-pending");
-      })();
-    </script>
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -36,26 +28,25 @@
         <nav aria-label="Hoofdnavigatie">
           <ul class="nav-list">
             <li>
-              <a class="nav-link" data-i18n="nav.home" href="index.html">
+              <a class="nav-link" href="index.html">
                 Home
               </a>
             </li>
             <li>
-              <a class="nav-link" data-i18n="nav.team" href="team.html">
+              <a class="nav-link" href="team.html">
                 Ons Team
               </a>
             </li>
             <li>
               <a
                 class="nav-link"
-                data-i18n="nav.treatments"
                 href="treatments.html"
               >
                 Behandelingen
               </a>
             </li>
             <li>
-              <a class="nav-link" data-i18n="nav.rates" href="rates.html">
+              <a class="nav-link" href="rates.html">
                 Tarieven
               </a>
             </li>
@@ -63,7 +54,6 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                data-i18n="nav.emergency"
                 href="emergency.html"
               >
                 Spoed
@@ -73,30 +63,11 @@
         </nav>
 
         <div class="header-actions">
-          <div class="lang-toggle" role="group" aria-label="Taal / Language">
-            <button
-              type="button"
-              class="lang-btn"
-              data-lang-btn="nl"
-              aria-pressed="true"
-            >
-              NL
-            </button>
-            <button
-              type="button"
-              class="lang-btn"
-              data-lang-btn="en"
-              aria-pressed="false"
-            >
-              EN
-            </button>
-          </div>
           <button
             type="button"
             class="hamburger-btn"
             aria-expanded="false"
             aria-controls="mobile-nav-panel"
-            data-i18n-attr="aria-label:nav.menuToggle"
             aria-label="Menu openen of sluiten"
           >
             <span class="bar"></span>
@@ -112,24 +83,23 @@
       >
         <ul>
           <li>
-            <a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li>
-            <a class="nav-link" data-i18n="nav.team" href="team.html">
+            <a class="nav-link" href="team.html">
               Ons Team
             </a>
           </li>
           <li>
             <a
               class="nav-link"
-              data-i18n="nav.treatments"
               href="treatments.html"
             >
               Behandelingen
             </a>
           </li>
           <li>
-            <a class="nav-link" data-i18n="nav.rates" href="rates.html">
+            <a class="nav-link" href="rates.html">
               Tarieven
             </a>
           </li>
@@ -137,7 +107,6 @@
             <a
               class="nav-link active"
               aria-current="page"
-              data-i18n="nav.emergency"
               href="emergency.html"
             >
               Spoed
@@ -150,53 +119,51 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1 data-i18n="emergency.hero.title">Spoedgevallen</h1>
-          <p data-i18n="emergency.hero.subtitle">
+          <h1>Spoedgevallen</h1>
+          <p>
             Wat te doen bij acute tandheelkundige klachten.
           </p>
 
           <div class="emergency-grid">
             <div class="callout">
-              <h3 data-i18n="emergency.during.title">Tijdens openingstijden</h3>
-              <p data-i18n="emergency.during.text">
+              <h3>Tijdens openingstijden</h3>
+              <p>
                 Bel direct 050-8795127 voor een spoedafspraak dezelfde dag. Wij
                 proberen u zo snel mogelijk te helpen.
               </p>
               <a
                 class="btn btn-primary"
                 href="tel:0508795127"
-                data-i18n="emergency.during.cta"
               >
                 Bel 050-8795127
               </a>
             </div>
 
             <div class="callout callout--danger">
-              <h3 data-i18n="emergency.after.title">Buiten openingstijden</h3>
-              <p data-i18n="emergency.after.text">
+              <h3>Buiten openingstijden</h3>
+              <p>
                 Voor spoedeisende tandheelkundige zorg in de avond, het weekend
                 of op feestdagen kunt u terecht bij de Tandartsenpost Groningen.
               </p>
               <!-- PLACEHOLDER after-hours contact info: verify before launch -->
               <p
                 class="callout callout--warning"
-                data-i18n="emergency.after.placeholderWarning"
               >
                 Let op: dit zijn voorlopige contactgegevens. Controleer en
                 vervang met de actuele gegevens van de tandartsenpost voordat de
                 site live gaat.
               </p>
               <dl>
-                <dt data-i18n="emergency.after.postName">
+                <dt>
                   Tandartsenpost Groningen (PLACEHOLDER)
                 </dt>
                 <dd>
-                  <span data-i18n="emergency.after.postPhoneLabel">
+                  <span>
                     Telefoon (PLACEHOLDER)
                   </span>
                   : PLACEHOLDER 050-000-0000
                   <br />
-                  <span data-i18n="emergency.after.postAddressLabel">
+                  <span>
                     Adres (PLACEHOLDER)
                   </span>
                   : PLACEHOLDER-adres, Groningen
@@ -205,23 +172,23 @@
             </div>
           </div>
 
-          <h2 data-i18n="emergency.symptoms.title">
+          <h2>
             Veelvoorkomende noodsituaties
           </h2>
           <ul class="symptom-list">
-            <li data-i18n="emergency.symptoms.item1">
+            <li>
               Hevige kiespijn die niet overgaat
             </li>
-            <li data-i18n="emergency.symptoms.item2">
+            <li>
               Tand eruit geslagen (bewaar vochtig, zoek binnen 1 uur hulp)
             </li>
-            <li data-i18n="emergency.symptoms.item3">
+            <li>
               Zwelling van kaak of gezicht
             </li>
-            <li data-i18n="emergency.symptoms.item4">
+            <li>
               Aanhoudende bloeding na een extractie
             </li>
-            <li data-i18n="emergency.symptoms.item5">
+            <li>
               Losgeraakte vulling of kroon met pijnklachten
             </li>
           </ul>
@@ -232,7 +199,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <h3 data-i18n="footer.addressTitle">Adres</h3>
+          <h3>Adres</h3>
           <p>
             Tandartsenpraktijk Zonnelaan
             <br />
@@ -247,34 +214,33 @@
           </p>
         </div>
         <div>
-          <h3 data-i18n="footer.hoursTitle">Openingstijden</h3>
-          <p data-i18n="footer.hours.weekdays">Ma–Vr: 08:30–17:00</p>
-          <p data-i18n="footer.hours.weekend">Za–Zo: Gesloten</p>
+          <h3>Openingstijden</h3>
+          <p>Ma–Vr: 08:30–17:00</p>
+          <p>Za–Zo: Gesloten</p>
         </div>
         <div>
-          <h3 data-i18n="footer.linksTitle">Snel naar</h3>
+          <h3>Snel naar</h3>
           <ul>
-            <li><a data-i18n="nav.team" href="team.html">Ons Team</a></li>
+            <li><a href="team.html">Ons Team</a></li>
             <li>
-              <a data-i18n="nav.treatments" href="treatments.html">
+              <a href="treatments.html">
                 Behandelingen
               </a>
             </li>
-            <li><a data-i18n="nav.rates" href="rates.html">Tarieven</a></li>
+            <li><a href="rates.html">Tarieven</a></li>
             <li>
-              <a data-i18n="nav.emergency" href="emergency.html">Spoed</a>
+              <a href="emergency.html">Spoed</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p data-i18n="footer.bottom">
+        <p>
           © 2026 Tandartsenpraktijk Zonnelaan. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
 
-    <script src="js/i18n.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/accordion.js" defer></script>
   </body>

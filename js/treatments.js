@@ -1,8 +1,6 @@
 /* Clones content/treatments.json's "categories" array into one accordion
    item per entry on treatments.html, using #treatment-category-template as
-   the markup source. Content is single-language (Dutch) — it does not
-   react to the NL/EN toggle. The H1 stays hardcoded/translated via i18n.js;
-   only the subtitle and the categories below it come from the CMS. */
+   the markup source. */
 (function () {
   function slugify(text) {
     return (text || "")
@@ -54,8 +52,5 @@
       });
 
       if (window.ZonnelaanAccordion) window.ZonnelaanAccordion.expandFromHash();
-      if (window.ZonnelaanI18n) {
-        window.ZonnelaanI18n.applyTranslations(window.ZonnelaanI18n.getLang());
-      }
     });
 })();

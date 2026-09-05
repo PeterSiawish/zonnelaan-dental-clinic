@@ -12,14 +12,6 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231976d2'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial'%3EZ%3C/text%3E%3C/svg%3E"
     />
-    <script>
-      (function () {
-        var lang = localStorage.getItem("zonnelaan-lang") || "nl";
-        document.documentElement.setAttribute("lang", lang);
-        if (lang === "en")
-          document.documentElement.classList.add("lang-en-pending");
-      })();
-    </script>
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
@@ -36,12 +28,12 @@
         <nav aria-label="Hoofdnavigatie">
           <ul class="nav-list">
             <li>
-              <a class="nav-link" data-i18n="nav.home" href="index.html">
+              <a class="nav-link" href="index.html">
                 Home
               </a>
             </li>
             <li>
-              <a class="nav-link" data-i18n="nav.team" href="team.html">
+              <a class="nav-link" href="team.html">
                 Ons Team
               </a>
             </li>
@@ -49,21 +41,19 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                data-i18n="nav.treatments"
                 href="treatments.html"
               >
                 Behandelingen
               </a>
             </li>
             <li>
-              <a class="nav-link" data-i18n="nav.rates" href="rates.html">
+              <a class="nav-link" href="rates.html">
                 Tarieven
               </a>
             </li>
             <li>
               <a
                 class="nav-link"
-                data-i18n="nav.emergency"
                 href="emergency.html"
               >
                 Spoed
@@ -73,30 +63,11 @@
         </nav>
 
         <div class="header-actions">
-          <div class="lang-toggle" role="group" aria-label="Taal / Language">
-            <button
-              type="button"
-              class="lang-btn"
-              data-lang-btn="nl"
-              aria-pressed="true"
-            >
-              NL
-            </button>
-            <button
-              type="button"
-              class="lang-btn"
-              data-lang-btn="en"
-              aria-pressed="false"
-            >
-              EN
-            </button>
-          </div>
           <button
             type="button"
             class="hamburger-btn"
             aria-expanded="false"
             aria-controls="mobile-nav-panel"
-            data-i18n-attr="aria-label:nav.menuToggle"
             aria-label="Menu openen of sluiten"
           >
             <span class="bar"></span>
@@ -112,10 +83,10 @@
       >
         <ul>
           <li>
-            <a class="nav-link" data-i18n="nav.home" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li>
-            <a class="nav-link" data-i18n="nav.team" href="team.html">
+            <a class="nav-link" href="team.html">
               Ons Team
             </a>
           </li>
@@ -123,19 +94,18 @@
             <a
               class="nav-link active"
               aria-current="page"
-              data-i18n="nav.treatments"
               href="treatments.html"
             >
               Behandelingen
             </a>
           </li>
           <li>
-            <a class="nav-link" data-i18n="nav.rates" href="rates.html">
+            <a class="nav-link" href="rates.html">
               Tarieven
             </a>
           </li>
           <li>
-            <a class="nav-link" data-i18n="nav.emergency" href="emergency.html">
+            <a class="nav-link" href="emergency.html">
               Spoed
             </a>
           </li>
@@ -146,8 +116,8 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1 data-i18n="treatments.hero.title">Behandelingen</h1>
-          <p class="treatments-intro js-subtitle" data-i18n="treatments.hero.subtitle">
+          <h1>Behandelingen</h1>
+          <p class="treatments-intro js-subtitle">
             Heldere uitleg over onze zorg, in gewone taal.
           </p>
 
@@ -173,7 +143,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <h3 data-i18n="footer.addressTitle">Adres</h3>
+          <h3>Adres</h3>
           <p>
             Tandartsenpraktijk Zonnelaan
             <br />
@@ -188,34 +158,33 @@
           </p>
         </div>
         <div>
-          <h3 data-i18n="footer.hoursTitle">Openingstijden</h3>
-          <p data-i18n="footer.hours.weekdays">Ma–Vr: 08:30–17:00</p>
-          <p data-i18n="footer.hours.weekend">Za–Zo: Gesloten</p>
+          <h3>Openingstijden</h3>
+          <p>Ma–Vr: 08:30–17:00</p>
+          <p>Za–Zo: Gesloten</p>
         </div>
         <div>
-          <h3 data-i18n="footer.linksTitle">Snel naar</h3>
+          <h3>Snel naar</h3>
           <ul>
-            <li><a data-i18n="nav.team" href="team.html">Ons Team</a></li>
+            <li><a href="team.html">Ons Team</a></li>
             <li>
-              <a data-i18n="nav.treatments" href="treatments.html">
+              <a href="treatments.html">
                 Behandelingen
               </a>
             </li>
-            <li><a data-i18n="nav.rates" href="rates.html">Tarieven</a></li>
+            <li><a href="rates.html">Tarieven</a></li>
             <li>
-              <a data-i18n="nav.emergency" href="emergency.html">Spoed</a>
+              <a href="emergency.html">Spoed</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
-        <p data-i18n="footer.bottom">
+        <p>
           © 2026 Tandartsenpraktijk Zonnelaan. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
 
-    <script src="js/i18n.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/accordion.js" defer></script>
     <script src="js/treatments.js" defer></script>

@@ -1,8 +1,5 @@
 /* Clones content/our-team.json's "doctors" array into one card per entry
-   on team.html, using #staff-card-template as the markup source. Doctor
-   content is single-language (Dutch) — it does not react to the NL/EN
-   toggle. Only the BIG/KRT dt label is re-synced through the existing
-   i18n dictionary, since it's page furniture, not editor-authored content. */
+   on team.html, using #staff-card-template as the markup source. */
 (function () {
   var TITLE_WORD = /^(drs\.?|dr\.?|prof\.?|mevr\.?|mr\.?)$/i;
 
@@ -64,10 +61,8 @@
 
     var licenseLabel = node.querySelector(".js-license-label");
     if (licenseLabel && doctor.license_type) {
-      licenseLabel.setAttribute(
-        "data-i18n",
-        doctor.license_type === "KRT" ? "team.label.krt" : "team.label.big"
-      );
+      licenseLabel.textContent =
+        doctor.license_type === "KRT" ? "KRT-nummer" : "BIG-nummer";
     }
 
     applyAvatar(node.querySelector(".avatar"), doctor, index);
@@ -87,9 +82,5 @@
         if (!doctor.name) return; // incomplete entry, nothing to show yet
         grid.appendChild(buildCard(doctor, i, template));
       });
-
-      if (window.ZonnelaanI18n) {
-        window.ZonnelaanI18n.applyTranslations(window.ZonnelaanI18n.getLang());
-      }
     });
 })();
