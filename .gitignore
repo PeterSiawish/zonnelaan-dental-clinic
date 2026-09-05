@@ -1,0 +1,5 @@
+# Ignore Claude Code internal metadata and caches
+.claude/
+
+# Ignore the local project instructions file
+CLAUDE.md
