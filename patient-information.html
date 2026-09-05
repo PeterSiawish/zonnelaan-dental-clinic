@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tandartsenpraktijk Zonnelaan - Tarieven & Vergoedingen</title>
+    <title>Tandartsenpraktijk Zonnelaan - Patiënteninformatie</title>
     <meta
       name="description"
-      content="Informatie over NZa-tarieven, aanvullende tandartsverzekering en rechtstreekse facturatie bij Tandartsenpraktijk Zonnelaan."
+      content="Wat te doen bij een tandheelkundige noodsituatie, en informatie over NZa-tarieven, aanvullende tandartsverzekering en rechtstreekse facturatie bij Tandartsenpraktijk Zonnelaan."
     />
     <link
       rel="icon"
@@ -55,10 +55,11 @@
             </li>
             <li>
               <a
-                class="nav-link"
-                href="emergency.html"
+                class="nav-link active"
+                aria-current="page"
+                href="patient-information.html"
               >
-                Spoed
+                Patiënteninformatie
               </a>
             </li>
           </ul>
@@ -109,8 +110,12 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="emergency.html">
-              Spoed
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="patient-information.html"
+            >
+              Patiënteninformatie
             </a>
           </li>
         </ul>
@@ -120,13 +125,85 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1>Tarieven & Vergoedingen</h1>
+          <h1>Patiënteninformatie</h1>
+          <p>
+            Alles wat u als patiënt moet weten: wat te doen bij een
+            spoedgeval, en wat een behandeling kost en wat wordt vergoed.
+          </p>
+
+          <h2 id="spoedgevallen">Spoedgevallen</h2>
+          <p>
+            Wat te doen bij acute tandheelkundige klachten.
+          </p>
+
+          <div class="emergency-grid">
+            <div class="callout">
+              <h3>Tijdens openingstijden</h3>
+              <p>
+                Bel direct 050-8795127 voor een spoedafspraak dezelfde dag. Wij
+                proberen u zo snel mogelijk te helpen.
+              </p>
+              <a
+                class="btn btn-primary"
+                href="tel:0508795127"
+              >
+                Bel 050-8795127
+              </a>
+            </div>
+
+            <div class="callout callout--danger">
+              <h3>Buiten openingstijden</h3>
+              <p>
+                Voor spoedeisende tandheelkundige zorg in de avond, het weekend
+                of op feestdagen kunt u terecht bij de Tandartsenpost Groningen.
+              </p>
+              <dl>
+                <dt>
+                  Tandartsenpost Groningen (PLACEHOLDER)
+                </dt>
+                <dd>
+                  <span>
+                    Telefoon (PLACEHOLDER)
+                  </span>
+                  : PLACEHOLDER 050-000-0000
+                  <br />
+                  <span>
+                    Adres (PLACEHOLDER)
+                  </span>
+                  : PLACEHOLDER-adres, Groningen
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3>
+            Veelvoorkomende noodsituaties
+          </h3>
+          <ul class="symptom-list">
+            <li>
+              Hevige kiespijn die niet overgaat
+            </li>
+            <li>
+              Tand eruit geslagen (bewaar vochtig, zoek binnen 1 uur hulp)
+            </li>
+            <li>
+              Zwelling van kaak of gezicht
+            </li>
+            <li>
+              Aanhoudende bloeding na een extractie
+            </li>
+            <li>
+              Losgeraakte vulling of kroon met pijnklachten
+            </li>
+          </ul>
+
+          <h2>Tarieven & Vergoedingen</h2>
           <p>
             Wat kost een behandeling, en wat wordt vergoed?
           </p>
 
           <div class="rates-section">
-            <h2>Vaste NZa-tarieven</h2>
+            <h3>Vaste NZa-tarieven</h3>
             <p>
               De tarieven voor tandheelkundige zorg in Nederland worden
               jaarlijks vastgesteld door de Nederlandse Zorgautoriteit (NZa) en
@@ -135,9 +212,9 @@
               C11, M03) die u kunt opzoeken bij de NZa.
             </p>
 
-            <h2>
+            <h3>
               Aanvullende Tandartsverzekering
-            </h2>
+            </h3>
             <p>
               De basisverzekering vergoedt reguliere tandheelkundige zorg voor
               volwassenen niet (alleen tot 18 jaar). Een aanvullende
@@ -146,7 +223,7 @@
               pakket. Controleer uw polisvoorwaarden.
             </p>
 
-            <h2>Rechtstreekse Facturatie</h2>
+            <h3>Rechtstreekse Facturatie</h3>
             <p>
               Voor veel verzekeraars kunnen wij rechtstreeks factureren, zodat u
               niet hoeft voor te schieten. Neem contact op om te controleren of
@@ -194,7 +271,7 @@
             </li>
             <li><a href="register.html">Inschrijven</a></li>
             <li>
-              <a href="emergency.html">Spoed</a>
+              <a href="patient-information.html">Patiënteninformatie</a>
             </li>
           </ul>
         </div>

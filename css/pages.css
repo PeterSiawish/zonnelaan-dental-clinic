@@ -98,7 +98,7 @@
 .treatments-intro { max-width: 70ch; }
 
 /* ===== Rates ===== */
-.rates-section h2 { margin-top: 0; }
+.rates-section h3 { margin-top: 0; }
 .rates-note {
   border-left: 4px solid var(--primary);
   padding-left: var(--space-3);
@@ -109,6 +109,7 @@
 .emergency-grid {
   display: grid;
   gap: var(--space-4);
+  margin-bottom: var(--space-4);
 }
 @media (min-width: 900px) {
   .emergency-grid { grid-template-columns: 1fr 1fr; }
