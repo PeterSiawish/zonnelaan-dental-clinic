@@ -20,6 +20,7 @@
 .btn-emergency { background: var(--danger); color: #fff; }
 .btn-emergency:hover { background: #a31f1f; color: #fff; }
 .btn-block { width: 100%; }
+.btn[hidden] { display: none; }
 
 /* ===== Cards & grids ===== */
 .card {
