@@ -5,6 +5,13 @@ content:
     type: file
     path: content/our-team.json
     fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Ons Team' pagina."
+        type: string
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
       - name: doctors
         label: Teamleden
         type: object
@@ -47,6 +54,10 @@ content:
     type: file
     path: content/treatments.json
     fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Behandelingen' pagina."
+        type: string
       - name: subtitle
         label: Introductietekst (onder de titel)
         type: text
@@ -58,10 +69,6 @@ content:
             collapsed: true
             summary: "{title}"
         fields:
-          - name: slug
-            label: Technische naam (link-anker)
-            description: "Gebruikt voor links vanaf de homepage. Normaal gesproken hoef je dit niet te wijzigen."
-            type: string
           - name: title
             label: Titel
             type: string
@@ -73,6 +80,10 @@ content:
             description: "Eén regel per behandeling. Gebruik de knop om een regel toe te voegen of te verwijderen."
             type: string
             list: true
+          - name: slug
+            label: "Sprong-link vanaf homepage (optioneel, meestal niet nodig)"
+            description: "Laat dit veld leeg — er wordt dan automatisch een technische naam gemaakt op basis van de titel. Vul dit alleen in als een knop op de homepage rechtstreeks naar déze categorie moet springen en die al opengeklapt moet tonen. De 4 bestaande homepage-knoppen gebruiken hiervoor cat1, cat2, cat3 en cat4 — die waarden dus niet hergebruiken voor een nieuwe categorie."
+            type: string
 
 media:
   input: images/team

@@ -39,6 +39,9 @@
       return r.json();
     })
     .then(function (data) {
+      var title = document.querySelector(".js-title");
+      if (title && data.title) title.textContent = data.title;
+
       var subtitle = document.querySelector(".js-subtitle");
       if (subtitle && data.subtitle) subtitle.textContent = data.subtitle;
 
