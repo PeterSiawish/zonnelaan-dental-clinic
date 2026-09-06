@@ -7,9 +7,14 @@
 
     const successBox = document.getElementById("register-success");
     const submitError = document.getElementById("submit-error");
+    const turnstileError = document.getElementById("turnstile-error");
     const submitButton = form.querySelector('button[type="submit"]');
 
     const fieldIds = ["first-name", "last-name", "email", "bsn", "phone", "consent"];
+
+    function resetTurnstile() {
+      if (window.turnstile) window.turnstile.reset();
+    }
 
     function clearFieldError(id) {
       const input = document.getElementById(id);
@@ -45,8 +50,15 @@
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       submitError.textContent = "";
+      turnstileError.textContent = "";
 
       if (!validate()) return;
+
+      const turnstileResponse = form.elements["cf-turnstile-response"];
+      if (!turnstileResponse || !turnstileResponse.value) {
+        turnstileError.textContent = "Bevestig dat u geen robot bent.";
+        return;
+      }
 
       submitButton.disabled = true;
 
@@ -65,11 +77,13 @@
           submitError.textContent =
             "Er ging iets mis bij het versturen. Probeer het opnieuw of neem telefonisch contact op.";
           submitButton.disabled = false;
+          resetTurnstile();
         }
       } catch (err) {
         submitError.textContent =
           "Er ging iets mis bij het versturen. Controleer uw internetverbinding en probeer het opnieuw.";
         submitButton.disabled = false;
+        resetTurnstile();
       }
     });
   });

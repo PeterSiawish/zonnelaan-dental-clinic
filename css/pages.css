@@ -134,9 +134,3 @@
 }
 .location-details li:last-child { border-bottom: 0; }
 .location-details dt { font-weight: 700; min-width: 90px; flex-shrink: 0; }
-.location-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  margin-top: var(--space-4);
-}

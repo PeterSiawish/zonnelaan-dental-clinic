@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/pages.css" />
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <header class="site-header">
@@ -28,22 +33,13 @@
         <nav aria-label="Hoofdnavigatie">
           <ul class="nav-list">
             <li>
-              <a class="nav-link" href="index.html">
-                Home
-              </a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li>
-              <a class="nav-link" href="team.html">
-                Ons Team
-              </a>
+              <a class="nav-link" href="team.html">Ons Team</a>
             </li>
             <li>
-              <a
-                class="nav-link"
-                href="treatments.html"
-              >
-                Behandelingen
-              </a>
+              <a class="nav-link" href="treatments.html">Behandelingen</a>
             </li>
             <li>
               <a
@@ -55,10 +51,7 @@
               </a>
             </li>
             <li>
-              <a
-                class="nav-link"
-                href="patient-information.html"
-              >
+              <a class="nav-link" href="patient-information.html">
                 Patiënteninformatie
               </a>
             </li>
@@ -89,24 +82,13 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li>
-            <a class="nav-link" href="team.html">
-              Ons Team
-            </a>
+            <a class="nav-link" href="team.html">Ons Team</a>
           </li>
           <li>
-            <a
-              class="nav-link"
-              href="treatments.html"
-            >
-              Behandelingen
-            </a>
+            <a class="nav-link" href="treatments.html">Behandelingen</a>
           </li>
           <li>
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="register.html"
-            >
+            <a class="nav-link active" aria-current="page" href="register.html">
               Inschrijven
             </a>
           </li>
@@ -125,13 +107,19 @@
           <h1>Inschrijven als nieuwe patiënt</h1>
           <p>
             Vul onderstaand formulier in om u in te schrijven bij
-            Tandartsenpraktijk Zonnelaan. Wij nemen zo snel mogelijk contact
-            met u op.
+            Tandartsenpraktijk Zonnelaan. Wij nemen zo snel mogelijk contact met
+            u op.
           </p>
 
-          <div class="form-success" id="register-success" role="status" tabindex="-1" hidden>
-            Bedankt voor uw inschrijving! Wij nemen zo snel mogelijk contact
-            met u op.
+          <div
+            class="form-success"
+            id="register-success"
+            role="status"
+            tabindex="-1"
+            hidden
+          >
+            Bedankt voor uw inschrijving! Wij nemen zo snel mogelijk contact met
+            u op.
           </div>
 
           <form id="register-form" novalidate>
@@ -178,7 +166,9 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="bsn">BSN (Burgerservicenummer)</label>
+              <label class="form-label" for="bsn">
+                BSN (Burgerservicenummer)
+              </label>
               <input
                 class="form-input"
                 type="text"
@@ -192,7 +182,9 @@
                 aria-describedby="bsn-hint"
                 required
               />
-              <p class="form-hint" id="bsn-hint">8 of 9 cijfers, zonder spaties</p>
+              <p class="form-hint" id="bsn-hint">
+                8 of 9 cijfers, zonder spaties
+              </p>
               <p class="form-error" id="bsn-error"></p>
             </div>
 
@@ -208,7 +200,9 @@
                 aria-describedby="phone-hint"
                 required
               />
-              <p class="form-hint" id="phone-hint">Bijv. 06-12345678 of 050-1234567</p>
+              <p class="form-hint" id="phone-hint">
+                Bijv. 06-12345678 of 050-1234567
+              </p>
               <p class="form-error" id="phone-error"></p>
             </div>
 
@@ -221,6 +215,14 @@
                 </label>
               </div>
               <p class="form-error" id="consent-error"></p>
+            </div>
+
+            <div class="form-group">
+              <div
+                class="cf-turnstile"
+                data-sitekey="0x4AAAAAAEqgilZiNKvdlVGS"
+              ></div>
+              <p class="form-error" id="turnstile-error"></p>
             </div>
 
             <p class="form-error" id="submit-error" role="alert"></p>
@@ -260,9 +262,7 @@
           <ul>
             <li><a href="team.html">Ons Team</a></li>
             <li>
-              <a href="treatments.html">
-                Behandelingen
-              </a>
+              <a href="treatments.html">Behandelingen</a>
             </li>
             <li><a href="register.html">Inschrijven</a></li>
             <li>
@@ -272,9 +272,7 @@
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>
-          © 2026 Tandartsenpraktijk Zonnelaan. Alle rechten voorbehouden.
-        </p>
+        <p>© 2026 Tandartsenpraktijk Zonnelaan. Alle rechten voorbehouden.</p>
       </div>
     </footer>
 
