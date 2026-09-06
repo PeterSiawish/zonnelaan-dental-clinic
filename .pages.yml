@@ -117,6 +117,59 @@ content:
         label: Tekst op verstuur-knop
         type: string
 
+  - name: patient_information
+    label: Patiënteninformatie Pagina
+    description: "Beheer hier de titel, introductietekst en secties (met subkopjes, tekst, knoppen en opsommingspunten) van de 'Patiënteninformatie' pagina."
+    type: file
+    path: content/patient-information.json
+    fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Patiënteninformatie' pagina."
+        type: string
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
+      - name: sections
+        label: Secties
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Sectietitel
+            type: string
+          - name: intro
+            label: Introductietekst (optioneel)
+            type: text
+          - name: subsections
+            label: Onderdelen in deze sectie
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Titel
+                type: string
+              - name: text
+                label: Tekst (optioneel)
+                type: text
+              - name: cta_label
+                label: "Knoptekst (optioneel, bijv. 'Bel 050-8795127')"
+                type: string
+              - name: cta_url
+                label: "Knoplink (optioneel, bijv. 'tel:0508795127')"
+                type: string
+              - name: points
+                label: Opsommingspunten (optioneel)
+                description: "Eén regel per punt. Gebruik de knop om een punt toe te voegen of te verwijderen."
+                type: string
+                list: true
+
 media:
   input: images/team
   output: images/team

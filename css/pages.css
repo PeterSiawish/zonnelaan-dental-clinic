@@ -97,25 +97,17 @@
 /* ===== Treatments ===== */
 .treatments-intro { max-width: 70ch; }
 
-/* ===== Rates ===== */
-.rates-section h3 { margin-top: 0; }
-.rates-note {
-  border-left: 4px solid var(--primary);
-  padding-left: var(--space-3);
-  color: var(--muted);
+/* ===== Patiënteninformatie ===== */
+.patient-info-section { margin-bottom: var(--space-5); }
+.patient-info-subsection {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-3);
 }
-
-/* ===== Emergency ===== */
-.emergency-grid {
-  display: grid;
-  gap: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-@media (min-width: 900px) {
-  .emergency-grid { grid-template-columns: 1fr 1fr; }
-}
-.emergency-grid h3 { margin-top: 0; }
-.symptom-list li { margin-bottom: var(--space-2); }
+.patient-info-subsection h3 { margin-top: 0; }
+.patient-info-subsection .js-subsection-cta { margin-top: var(--space-2); }
+.patient-info-subsection ul li { margin-bottom: var(--space-2); }
 
 /* ===== Home: Location ===== */
 .location-grid {

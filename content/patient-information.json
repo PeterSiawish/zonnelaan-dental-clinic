@@ -1,0 +1,70 @@
+{
+  "title": "Patiënteninformatie",
+  "subtitle": "Alles wat u als patiënt moet weten: wat te doen bij een spoedgeval, en wat een behandeling kost en wat wordt vergoed.",
+  "sections": [
+    {
+      "title": "Spoedgevallen",
+      "intro": "Wat te doen bij acute tandheelkundige klachten.",
+      "subsections": [
+        {
+          "title": "Tijdens openingstijden",
+          "text": "Bel direct 050-8795127 voor een spoedafspraak dezelfde dag. Wij proberen u zo snel mogelijk te helpen.",
+          "cta_label": "Bel 050-8795127",
+          "cta_url": "tel:0508795127",
+          "points": []
+        },
+        {
+          "title": "Buiten openingstijden",
+          "text": "Voor spoedeisende tandheelkundige zorg in de avond, het weekend of op feestdagen kunt u terecht bij de Tandartsenpost Groningen.",
+          "cta_label": "",
+          "cta_url": "",
+          "points": [
+            "Tandartsenpost Groningen (PLACEHOLDER)",
+            "Telefoon (PLACEHOLDER): 050-000-0000",
+            "Adres (PLACEHOLDER): PLACEHOLDER-adres, Groningen"
+          ]
+        },
+        {
+          "title": "Veelvoorkomende noodsituaties",
+          "text": "",
+          "cta_label": "",
+          "cta_url": "",
+          "points": [
+            "Hevige kiespijn die niet overgaat",
+            "Tand eruit geslagen (bewaar vochtig, zoek binnen 1 uur hulp)",
+            "Zwelling van kaak of gezicht",
+            "Aanhoudende bloeding na een extractie",
+            "Losgeraakte vulling of kroon met pijnklachten"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tarieven & Vergoedingen",
+      "intro": "Wat kost een behandeling, en wat wordt vergoed?",
+      "subsections": [
+        {
+          "title": "Vaste NZa-tarieven",
+          "text": "De tarieven voor tandheelkundige zorg in Nederland worden jaarlijks vastgesteld door de Nederlandse Zorgautoriteit (NZa) en zijn bij elke praktijk hetzelfde. Wij bepalen dus niet zelf onze prijzen. Op uw factuur staan de officiële prestatiecodes (bijv. C11, M03) die u kunt opzoeken bij de NZa.",
+          "cta_label": "",
+          "cta_url": "",
+          "points": []
+        },
+        {
+          "title": "Aanvullende Tandartsverzekering",
+          "text": "De basisverzekering vergoedt reguliere tandheelkundige zorg voor volwassenen niet (alleen tot 18 jaar). Een aanvullende tandartsverzekering wordt daarom aangeraden. Vergoedingspercentages en maxima verschillen per verzekeraar en pakket. Controleer uw polisvoorwaarden.",
+          "cta_label": "",
+          "cta_url": "",
+          "points": []
+        },
+        {
+          "title": "Rechtstreekse Facturatie",
+          "text": "Voor veel verzekeraars kunnen wij rechtstreeks factureren, zodat u niet hoeft voor te schieten. Neem contact op om te controleren of dit voor uw verzekeraar geldt.",
+          "cta_label": "",
+          "cta_url": "",
+          "points": []
+        }
+      ]
+    }
+  ]
+}

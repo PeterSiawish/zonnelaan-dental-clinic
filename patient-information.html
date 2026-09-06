@@ -125,114 +125,32 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1>Patiënteninformatie</h1>
-          <p>
+          <h1 class="js-title">Patiënteninformatie</h1>
+          <p class="js-subtitle">
             Alles wat u als patiënt moet weten: wat te doen bij een
             spoedgeval, en wat een behandeling kost en wat wordt vergoed.
           </p>
 
-          <h2 id="spoedgevallen">Spoedgevallen</h2>
-          <p>
-            Wat te doen bij acute tandheelkundige klachten.
-          </p>
+          <div id="patient-info-sections">
+            <!-- Sections/subsections are cloned from these templates and
+                 filled in by js/patient-information.js from
+                 content/patient-information.json (editable via Pages CMS) -->
+            <template id="patient-info-section-template">
+              <div class="patient-info-section">
+                <h2 class="js-section-title"></h2>
+                <p class="js-section-intro"></p>
+                <div class="js-subsections"></div>
+              </div>
+            </template>
 
-          <div class="emergency-grid">
-            <div class="callout">
-              <h3>Tijdens openingstijden</h3>
-              <p>
-                Bel direct 050-8795127 voor een spoedafspraak dezelfde dag. Wij
-                proberen u zo snel mogelijk te helpen.
-              </p>
-              <a
-                class="btn btn-primary"
-                href="tel:0508795127"
-              >
-                Bel 050-8795127
-              </a>
-            </div>
-
-            <div class="callout callout--danger">
-              <h3>Buiten openingstijden</h3>
-              <p>
-                Voor spoedeisende tandheelkundige zorg in de avond, het weekend
-                of op feestdagen kunt u terecht bij de Tandartsenpost Groningen.
-              </p>
-              <dl>
-                <dt>
-                  Tandartsenpost Groningen (PLACEHOLDER)
-                </dt>
-                <dd>
-                  <span>
-                    Telefoon (PLACEHOLDER)
-                  </span>
-                  : PLACEHOLDER 050-000-0000
-                  <br />
-                  <span>
-                    Adres (PLACEHOLDER)
-                  </span>
-                  : PLACEHOLDER-adres, Groningen
-                </dd>
-              </dl>
-            </div>
-          </div>
-
-          <h3>
-            Veelvoorkomende noodsituaties
-          </h3>
-          <ul class="symptom-list">
-            <li>
-              Hevige kiespijn die niet overgaat
-            </li>
-            <li>
-              Tand eruit geslagen (bewaar vochtig, zoek binnen 1 uur hulp)
-            </li>
-            <li>
-              Zwelling van kaak of gezicht
-            </li>
-            <li>
-              Aanhoudende bloeding na een extractie
-            </li>
-            <li>
-              Losgeraakte vulling of kroon met pijnklachten
-            </li>
-          </ul>
-
-          <h2>Tarieven & Vergoedingen</h2>
-          <p>
-            Wat kost een behandeling, en wat wordt vergoed?
-          </p>
-
-          <div class="rates-section">
-            <h3>Vaste NZa-tarieven</h3>
-            <p>
-              De tarieven voor tandheelkundige zorg in Nederland worden
-              jaarlijks vastgesteld door de Nederlandse Zorgautoriteit (NZa) en
-              zijn bij elke praktijk hetzelfde. Wij bepalen dus niet zelf onze
-              prijzen. Op uw factuur staan de officiële prestatiecodes (bijv.
-              C11, M03) die u kunt opzoeken bij de NZa.
-            </p>
-
-            <h3>
-              Aanvullende Tandartsverzekering
-            </h3>
-            <p>
-              De basisverzekering vergoedt reguliere tandheelkundige zorg voor
-              volwassenen niet (alleen tot 18 jaar). Een aanvullende
-              tandartsverzekering wordt daarom aangeraden.
-              Vergoedingspercentages en maxima verschillen per verzekeraar en
-              pakket. Controleer uw polisvoorwaarden.
-            </p>
-
-            <h3>Rechtstreekse Facturatie</h3>
-            <p>
-              Voor veel verzekeraars kunnen wij rechtstreeks factureren, zodat u
-              niet hoeft voor te schieten. Neem contact op om te controleren of
-              dit voor uw verzekeraar geldt.
-            </p>
-            <p class="rates-note">
-              PLACEHOLDER: voeg hier een lijst toe van verzekeraars waarmee
-              direct wordt gefactureerd.
-            </p>
+            <template id="patient-info-subsection-template">
+              <div class="patient-info-subsection">
+                <h3 class="js-subsection-title"></h3>
+                <p class="js-subsection-text"></p>
+                <a class="btn btn-primary js-subsection-cta"></a>
+                <ul class="js-subsection-points"></ul>
+              </div>
+            </template>
           </div>
         </div>
       </section>
@@ -284,5 +202,6 @@
     </footer>
 
     <script src="js/nav.js" defer></script>
+    <script src="js/patient-information.js" defer></script>
   </body>
 </html>
