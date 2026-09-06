@@ -85,6 +85,38 @@ content:
             description: "Laat dit veld leeg — er wordt dan automatisch een technische naam gemaakt op basis van de titel. Vul dit alleen in als een knop op de homepage rechtstreeks naar déze categorie moet springen en die al opengeklapt moet tonen. De 4 bestaande homepage-knoppen gebruiken hiervoor cat1, cat2, cat3 en cat4 — die waarden dus niet hergebruiken voor een nieuwe categorie."
             type: string
 
+  - name: register
+    label: Inschrijven Pagina
+    description: "Beheer hier de titel, introductietekst, veldlabels, toestemmingstekst en knoptekst van het inschrijfformulier."
+    type: file
+    path: content/register.json
+    fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Inschrijven' pagina."
+        type: string
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
+      - name: name_label
+        label: "Veldlabel: Naam"
+        type: string
+      - name: email_label
+        label: "Veldlabel: E-mailadres"
+        type: string
+      - name: bsn_label
+        label: "Veldlabel: BSN"
+        type: string
+      - name: phone_label
+        label: "Veldlabel: Telefoonnummer"
+        type: string
+      - name: consent_text
+        label: Tekst bij toestemmingsvakje
+        type: text
+      - name: submit_label
+        label: Tekst op verstuur-knop
+        type: string
+
 media:
   input: images/team
   output: images/team

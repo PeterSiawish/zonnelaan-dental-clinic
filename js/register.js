@@ -2,6 +2,34 @@
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpgagdl";
 
   document.addEventListener("DOMContentLoaded", () => {
+    fetch("./content/register.json")
+      .then((r) => r.json())
+      .then((data) => {
+        const title = document.querySelector(".js-title");
+        if (title && data.title) title.textContent = data.title;
+
+        const subtitle = document.querySelector(".js-subtitle");
+        if (subtitle && data.subtitle) subtitle.textContent = data.subtitle;
+
+        const nameLabel = document.querySelector(".js-name-label");
+        if (nameLabel && data.name_label) nameLabel.textContent = data.name_label;
+
+        const emailLabel = document.querySelector(".js-email-label");
+        if (emailLabel && data.email_label) emailLabel.textContent = data.email_label;
+
+        const bsnLabel = document.querySelector(".js-bsn-label");
+        if (bsnLabel && data.bsn_label) bsnLabel.textContent = data.bsn_label;
+
+        const phoneLabel = document.querySelector(".js-phone-label");
+        if (phoneLabel && data.phone_label) phoneLabel.textContent = data.phone_label;
+
+        const consentText = document.querySelector(".js-consent-text");
+        if (consentText && data.consent_text) consentText.textContent = data.consent_text;
+
+        const submitLabel = document.querySelector(".js-submit-label");
+        if (submitLabel && data.submit_label) submitLabel.textContent = data.submit_label;
+      });
+
     const form = document.getElementById("register-form");
     if (!form) return;
 
@@ -10,7 +38,7 @@
     const turnstileError = document.getElementById("turnstile-error");
     const submitButton = form.querySelector('button[type="submit"]');
 
-    const fieldIds = ["first-name", "last-name", "email", "bsn", "phone", "consent"];
+    const fieldIds = ["name", "email", "bsn", "phone", "consent"];
 
     function resetTurnstile() {
       if (window.turnstile) window.turnstile.reset();

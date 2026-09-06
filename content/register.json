@@ -1,0 +1,10 @@
+{
+  "title": "Inschrijven als nieuwe patiënt",
+  "subtitle": "Vul onderstaand formulier in om u in te schrijven bij Tandartsenpraktijk Zonnelaan. Wij nemen zo snel mogelijk contact met u op.",
+  "name_label": "Naam",
+  "email_label": "E-mailadres",
+  "bsn_label": "BSN (Burgerservicenummer)",
+  "phone_label": "Telefoonnummer",
+  "consent_text": "Ik ga akkoord dat mijn gegevens, inclusief BSN, worden verwerkt ten behoeve van mijn inschrijving als patiënt.",
+  "submit_label": "Verstuur inschrijving"
+}

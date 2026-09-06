@@ -104,8 +104,8 @@
     <main id="main">
       <section class="section">
         <div class="container">
-          <h1>Inschrijven als nieuwe patiënt</h1>
-          <p>
+          <h1 class="js-title">Inschrijven als nieuwe patiënt</h1>
+          <p class="js-subtitle">
             Vul onderstaand formulier in om u in te schrijven bij
             Tandartsenpraktijk Zonnelaan. Wij nemen zo snel mogelijk contact met
             u op.
@@ -124,35 +124,21 @@
 
           <form id="register-form" novalidate>
             <div class="form-group">
-              <label class="form-label" for="first-name">Voornaam</label>
+              <label class="form-label js-name-label" for="name">Naam</label>
               <input
                 class="form-input"
                 type="text"
-                id="first-name"
-                name="firstName"
-                autocomplete="given-name"
-                placeholder="Jan"
+                id="name"
+                name="name"
+                autocomplete="name"
+                placeholder="Jan Jansen"
                 required
               />
-              <p class="form-error" id="first-name-error"></p>
+              <p class="form-error" id="name-error"></p>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="last-name">Achternaam</label>
-              <input
-                class="form-input"
-                type="text"
-                id="last-name"
-                name="lastName"
-                autocomplete="family-name"
-                placeholder="Jansen"
-                required
-              />
-              <p class="form-error" id="last-name-error"></p>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="email">E-mailadres</label>
+              <label class="form-label js-email-label" for="email">E-mailadres</label>
               <input
                 class="form-input"
                 type="email"
@@ -166,7 +152,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="bsn">
+              <label class="form-label js-bsn-label" for="bsn">
                 BSN (Burgerservicenummer)
               </label>
               <input
@@ -189,7 +175,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="phone">Telefoonnummer</label>
+              <label class="form-label js-phone-label" for="phone">Telefoonnummer</label>
               <input
                 class="form-input"
                 type="tel"
@@ -209,7 +195,7 @@
             <div class="form-group">
               <div class="form-checkbox-row">
                 <input type="checkbox" id="consent" name="consent" required />
-                <label for="consent">
+                <label class="js-consent-text" for="consent">
                   Ik ga akkoord dat mijn gegevens, inclusief BSN, worden
                   verwerkt ten behoeve van mijn inschrijving als patiënt.
                 </label>
@@ -227,7 +213,7 @@
 
             <p class="form-error" id="submit-error" role="alert"></p>
 
-            <button class="btn btn-primary btn-block" type="submit">
+            <button class="btn btn-primary btn-block js-submit-label" type="submit">
               Verstuur inschrijving
             </button>
           </form>
