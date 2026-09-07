@@ -125,10 +125,10 @@
       <section class="hero">
         <div class="container hero-inner">
           <div>
-            <h1>
+            <h1 class="js-hero-title">
               Welkom bij Tandartsenpraktijk Zonnelaan
             </h1>
-            <p>
+            <p class="js-hero-subtitle">
               Persoonlijke, moderne tandheelkundige zorg voor het hele gezin in
               Groningen.
             </p>
@@ -161,8 +161,8 @@
         <div class="container">
           <div class="location-grid">
             <div class="location-info">
-              <h2>Bezoek of bel ons</h2>
-              <p>
+              <h2 class="js-location-title">Bezoek of bel ons</h2>
+              <p class="js-location-subtitle">
                 Zonnelaan 32 in Groningen, goed bereikbaar per fiets, auto en
                 openbaar vervoer.
               </p>
@@ -170,26 +170,26 @@
               <dl class="location-details">
                 <li>
                   <dt>Adres</dt>
-                  <dd>Zonnelaan 32, 9742 BM Groningen</dd>
+                  <dd class="js-address">Zonnelaan 32, 9742 BM Groningen</dd>
                 </li>
                 <li>
                   <dt>Telefoon</dt>
-                  <dd><a href="tel:0508795127">050-8795127</a></dd>
+                  <dd><a class="js-phone" href="tel:0508795127">050-8795127</a></dd>
                 </li>
                 <li>
                   <dt>E-mail</dt>
                   <dd>
-                    <a href="mailto:info@tandartss.nl">info@tandartss.nl</a>
+                    <a class="js-email" href="mailto:info@tandartss.nl">info@tandartss.nl</a>
                   </dd>
                 </li>
                 <li>
                   <dt>Openingstijden</dt>
                   <dd>
-                    <span>
+                    <span class="js-hours-weekday">
                       Ma–Vr: 08:30–17:00
                     </span>
                     <br />
-                    <span>
+                    <span class="js-hours-weekend">
                       Za–Zo: Gesloten
                     </span>
                   </dd>
@@ -212,43 +212,43 @@
 
       <section class="section section--alt" id="services">
         <div class="container">
-          <h2>Onze zorg</h2>
-          <p>
+          <h2 class="js-services-title">Onze zorg</h2>
+          <p class="js-services-subtitle">
             Van preventie tot specialistische behandelingen, helder uitgelegd.
           </p>
 
           <div class="card-grid card-grid--4">
             <a class="card service-card" href="treatments.html#cat1">
-              <h3>Preventieve Zorg</h3>
-              <p>
+              <h3 class="js-service-1-title">Preventieve Zorg</h3>
+              <p class="js-service-1-text">
                 Periodieke controles, gebitsreiniging en preventieve begeleiding
                 om problemen voor te blijven.
               </p>
               <span>Lees meer</span>
             </a>
             <a class="card service-card" href="treatments.html#cat2">
-              <h3>
+              <h3 class="js-service-2-title">
                 Restauratief & Cosmetisch
               </h3>
-              <p>
+              <p class="js-service-2-text">
                 Vullingen, kronen, bruggen en cosmetische behandelingen zoals
                 bleken en facings.
               </p>
               <span>Lees meer</span>
             </a>
             <a class="card service-card" href="treatments.html#cat3">
-              <h3>Specialistische Zorg</h3>
-              <p>
+              <h3 class="js-service-3-title">Specialistische Zorg</h3>
+              <p class="js-service-3-text">
                 Wortelkanaalbehandelingen, parodontologie en implantologie voor
                 complexere zorg.
               </p>
               <span>Lees meer</span>
             </a>
             <a class="card service-card" href="treatments.html#cat4">
-              <h3>
+              <h3 class="js-service-4-title">
                 Angstpatiënten (Angsttandarts)
               </h3>
-              <p>
+              <p class="js-service-4-text">
                 Rustige, stapsgewijze begeleiding voor patiënten die extra
                 geruststelling nodig hebben.
               </p>
@@ -281,40 +281,22 @@
 
       <section class="section" id="team">
         <div class="container">
-          <h2>Ons Team</h2>
-          <p>
+          <h2 class="js-team-title">Ons Team</h2>
+          <p class="js-team-subtitle">
             Maak kennis met onze tandartsen en mondhygiënisten.
           </p>
 
-          <div class="card-grid card-grid--4">
-            <div class="card staff-card">
-              <div class="avatar avatar-1" aria-hidden="true">SV</div>
-              <h3>Drs. Sanne de Vries</h3>
-              <p class="staff-role">
-                Tandarts / Dentist
-              </p>
-            </div>
-            <div class="card staff-card">
-              <div class="avatar avatar-2" aria-hidden="true">MJ</div>
-              <h3>Drs. Mark Jansen</h3>
-              <p class="staff-role">
-                Tandarts / Angsttandarts
-              </p>
-            </div>
-            <div class="card staff-card">
-              <div class="avatar avatar-3" aria-hidden="true">LB</div>
-              <h3>Lisa Bakker</h3>
-              <p class="staff-role">
-                Mondhygiënist / Dental Hygienist
-              </p>
-            </div>
-            <div class="card staff-card">
-              <div class="avatar avatar-4" aria-hidden="true">FE</div>
-              <h3>Drs. Fatima El Amrani</h3>
-              <p class="staff-role">
-                Tandarts / Implantologie
-              </p>
-            </div>
+          <div class="card-grid card-grid--4" id="staff-preview-grid">
+            <!-- Up to 4 cards are cloned from this template and filled in by
+                 js/home.js from content/our-team.json (same source as team.html,
+                 editable via Pages CMS). -->
+            <template id="staff-preview-card-template">
+              <div class="card staff-card">
+                <div class="avatar" aria-hidden="true"></div>
+                <h3 class="js-name"></h3>
+                <p class="staff-role js-role"></p>
+              </div>
+            </template>
           </div>
 
           <div class="section-cta">
@@ -376,5 +358,6 @@
 
     <script src="js/nav.js" defer></script>
     <script src="js/accordion.js" defer></script>
+    <script src="js/home.js" defer></script>
   </body>
 </html>

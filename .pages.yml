@@ -1,4 +1,80 @@
 content:
+  - name: home
+    label: Homepage
+    description: "Beheer hier de teksten op de homepage: welkomsttekst, contactgegevens, de 'Onze zorg' kaarten en de introtekst bij 'Ons Team'. De teamleden zelf worden beheerd via 'Ons Team Pagina' hieronder."
+    type: file
+    path: content/index.json
+    fields:
+      - name: hero_title
+        label: Hoofdtitel (bovenaan de pagina)
+        type: string
+      - name: hero_subtitle
+        label: Ondertitel (bovenaan de pagina)
+        type: text
+      - name: location_title
+        label: "Titel contactsectie (bijv. 'Bezoek of bel ons')"
+        type: string
+      - name: location_subtitle
+        label: Introductietekst contactsectie
+        type: text
+      - name: address
+        label: Adres
+        type: string
+      - name: phone
+        label: Telefoonnummer
+        description: "Bijv. '050-8795127' — wordt automatisch een klikbare telefoonlink."
+        type: string
+      - name: email
+        label: E-mailadres
+        description: "Wordt automatisch een klikbare e-maillink."
+        type: string
+      - name: hours_weekday
+        label: "Openingstijden doordeweeks (bijv. 'Ma–Vr: 08:30–17:00')"
+        type: string
+      - name: hours_weekend
+        label: "Openingstijden weekend (bijv. 'Za–Zo: Gesloten')"
+        type: string
+      - name: services_title
+        label: "Titel 'Onze zorg' sectie"
+        type: string
+      - name: services_subtitle
+        label: "Introductietekst 'Onze zorg' sectie"
+        type: text
+      - name: service_1_title
+        label: Kaart 1 titel
+        description: "Deze kaart linkt altijd naar Behandelingen > cat1 (Preventieve Zorg). De link zelf is niet aanpasbaar via de CMS."
+        type: string
+      - name: service_1_text
+        label: Kaart 1 tekst
+        type: text
+      - name: service_2_title
+        label: Kaart 2 titel
+        description: "Deze kaart linkt altijd naar Behandelingen > cat2. De link zelf is niet aanpasbaar via de CMS."
+        type: string
+      - name: service_2_text
+        label: Kaart 2 tekst
+        type: text
+      - name: service_3_title
+        label: Kaart 3 titel
+        description: "Deze kaart linkt altijd naar Behandelingen > cat3. De link zelf is niet aanpasbaar via de CMS."
+        type: string
+      - name: service_3_text
+        label: Kaart 3 tekst
+        type: text
+      - name: service_4_title
+        label: Kaart 4 titel
+        description: "Deze kaart linkt altijd naar Behandelingen > cat4. De link zelf is niet aanpasbaar via de CMS."
+        type: string
+      - name: service_4_text
+        label: Kaart 4 tekst
+        type: text
+      - name: team_title
+        label: "Titel 'Ons Team' sectie"
+        type: string
+      - name: team_subtitle
+        label: "Introductietekst 'Ons Team' sectie"
+        type: text
+
   - name: our_team
     label: Ons Team Pagina
     description: "Beheer hier de gegevens van elk teamlid zoals ze op de 'Ons Team' pagina verschijnen."
