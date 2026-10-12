@@ -73,6 +73,49 @@
         color: #7a5a1f;
       }
 
+      .closure {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        background: #ffffff;
+        border: 1px solid #f3c7c7;
+        border-left: 5px solid #c62828;
+        border-radius: 10px;
+        padding: 16px 18px;
+        margin-bottom: 14px;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+      }
+
+      .closure-icon {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: #fdecea;
+        color: #c62828;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .closure h2 {
+        margin: 0 0 4px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #b71c1c;
+      }
+
+      .closure p {
+        margin: 4px 0 0;
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--text);
+      }
+
+      .closure .sub {
+        color: var(--muted);
+      }
+
       .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -159,6 +202,45 @@
     </div>
 
     <div class="container">
+      <div
+        class="closure"
+        id="closure-notice"
+        role="alert"
+        data-until="2026-10-17"
+      >
+        <div class="closure-icon" aria-hidden="true">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="7" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </div>
+        <div>
+          <h2>Praktijk tijdelijk gesloten</h2>
+          <p>
+            Van
+            <strong>maandag 12 oktober t/m vrijdag 16 oktober</strong>
+            is onze praktijk gesloten. Vanaf
+            <strong>maandag 19 oktober</strong>
+            staan wij weer graag voor u klaar.
+          </p>
+          <p class="sub">
+            Berichten en e-mails die u in deze periode stuurt, beantwoorden wij
+            zo snel mogelijk na onze terugkomst. Heeft u acute klachten? Neem
+            dan contact op met de tandartsenspoeddienst in uw regio.
+          </p>
+        </div>
+      </div>
+
       <div class="notice">
         Website in ontwikkeling — binnenkort online met een volledig vernieuwde
         uitstraling.
@@ -217,5 +299,15 @@
     </div>
 
     <footer>© 2026 Tandartsenpraktijk Zonnelaan</footer>
+
+    <script>
+      // Hide the closure notice automatically once the closure period is over.
+      (function () {
+        var el = document.getElementById("closure-notice");
+        if (!el) return;
+        var until = new Date(el.getAttribute("data-until") + "T00:00:00");
+        if (new Date() >= until) el.remove();
+      })();
+    </script>
   </body>
 </html>
