@@ -116,6 +116,13 @@
               </a>
               <a class="btn btn-secondary" href="#team">Bekijk team</a>
             </div>
+            <!-- Optional notice, filled in by js/home.js from
+                 content/index.json (notice_title / notice). Stays hidden
+                 when both are empty. -->
+            <div class="callout callout--danger hero-notice" role="status" hidden>
+              <p class="hero-notice-title js-notice-title" hidden></p>
+              <p class="hero-notice-text js-notice" hidden></p>
+            </div>
           </div>
           <img
             class="hero-art"
@@ -158,9 +165,9 @@
                 <li>
                   <dt>Openingstijden</dt>
                   <dd>
-                    <span class="js-hours-weekday">Ma–Vr: 08:30–17:00</span>
+                    <span class="multiline js-hours-weekday">Maandag t/m Donderdag van 8:45 tot 17:00 uur</span>
                     <br />
-                    <span class="js-hours-weekend">Za–Zo: Gesloten</span>
+                    <span class="multiline js-hours-weekend">Za–Zo: Gesloten</span>
                   </dd>
                 </li>
               </dl>
@@ -283,8 +290,8 @@
         </div>
         <div>
           <h3>Openingstijden</h3>
-          <p>Ma–Vr: 08:30–17:00</p>
-          <p>Za–Zo: Gesloten</p>
+          <p class="multiline js-hours-weekday">Maandag t/m Donderdag van 8:45 tot 17:00 uur</p>
+          <p class="multiline js-hours-weekend">Za–Zo: Gesloten</p>
         </div>
         <div>
           <h3>Snel naar</h3>
@@ -306,6 +313,7 @@
     </footer>
 
     <script src="js/nav.js" defer></script>
+    <script src="js/opening-hours.js" defer></script>
     <script src="js/accordion.js" defer></script>
     <script src="js/home.js" defer></script>
   </body>

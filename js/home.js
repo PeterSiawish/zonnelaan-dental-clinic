@@ -1,4 +1,5 @@
-/* Fills the homepage's flat text fields from content/index.json, and
+/* Fills the homepage's flat text fields and the optional hero notice from
+   content/index.json (opening hours are handled by js/opening-hours.js), and
    clones up to 4 doctor cards from content/our-team.json's "doctors" array
    (same source as team.html) into #staff-preview-grid using
    #staff-preview-card-template. */
@@ -47,8 +48,6 @@
     "location-title",
     "location-subtitle",
     "address",
-    "hours-weekday",
-    "hours-weekend",
     "services-title",
     "services-subtitle",
     "service-1-title",
@@ -73,6 +72,15 @@
         var value = data[field.replace(/-/g, "_")];
         if (el && value) el.textContent = value;
       });
+
+      var notice = document.querySelector(".hero-notice");
+      if (notice) {
+        var noticeTitle = (data.notice_title || "").trim();
+        var noticeText = (data.notice || "").trim();
+        setOrHide(notice.querySelector(".js-notice-title"), noticeTitle);
+        setOrHide(notice.querySelector(".js-notice"), noticeText);
+        notice.hidden = !noticeTitle && !noticeText;
+      }
 
       var phone = document.querySelector(".js-phone");
       if (phone && data.phone) {

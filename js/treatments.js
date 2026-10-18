@@ -24,6 +24,12 @@
     node.querySelector(".js-title").textContent = category.title;
     node.querySelector(".js-intro").textContent = category.intro;
 
+    var icon = node.querySelector(".category-icon");
+    if (icon && category.icon) {
+      icon.src = category.icon;
+      icon.hidden = false;
+    }
+
     var list = node.querySelector(".js-items");
     (category.items || []).forEach(function (item) {
       var li = document.createElement("li");

@@ -98,6 +98,22 @@
   color: var(--text);
   cursor: pointer;
 }
+.accordion-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.category-icon {
+  width: 36px; height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--secondary-bg);
+}
+.category-icon[hidden] { display: none; }
+@media (min-width: 600px) {
+  .category-icon { width: 44px; height: 44px; }
+}
 .accordion-header .chevron {
   flex-shrink: 0;
   width: 12px; height: 12px;

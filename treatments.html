@@ -128,7 +128,10 @@
             <template id="treatment-category-template">
               <div class="accordion-item">
                 <button class="accordion-header" aria-expanded="false">
-                  <span class="js-title"></span>
+                  <span class="accordion-title">
+                    <img class="category-icon" alt="" hidden />
+                    <span class="js-title"></span>
+                  </span>
                   <span class="chevron" aria-hidden="true"></span>
                 </button>
                 <div class="accordion-panel" role="region" hidden>
@@ -161,8 +164,8 @@
         </div>
         <div>
           <h3>Openingstijden</h3>
-          <p>Ma–Vr: 08:30–17:00</p>
-          <p>Za–Zo: Gesloten</p>
+          <p class="multiline js-hours-weekday">Maandag t/m Donderdag van 8:45 tot 17:00 uur</p>
+          <p class="multiline js-hours-weekend">Za–Zo: Gesloten</p>
         </div>
         <div>
           <h3>Snel naar</h3>
@@ -188,6 +191,7 @@
     </footer>
 
     <script src="js/nav.js" defer></script>
+    <script src="js/opening-hours.js" defer></script>
     <script src="js/accordion.js" defer></script>
     <script src="js/treatments.js" defer></script>
   </body>

@@ -14,6 +14,37 @@
   gap: var(--space-3);
   margin-top: var(--space-3);
 }
+/* Optional CMS notice under the hero buttons (builds on .callout--danger) */
+.hero-notice {
+  margin-top: var(--space-4);
+  border-width: 2px;
+  padding: var(--space-3) var(--space-4);
+}
+.hero-notice p { margin: 0; white-space: pre-line; }
+.hero-notice p + p:not([hidden]) { margin-top: var(--space-2); }
+.hero-notice-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--danger);
+}
+.hero-notice-title::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.4em; height: 1.4em;
+  border-radius: 50%;
+  background: var(--danger);
+  color: #fff;
+  font-size: 0.9em;
+}
+.hero-notice-title[hidden] { display: none; }
+.hero-notice-text { font-weight: 700; }
 .hero-art {
   display: block;
   width: 100%;

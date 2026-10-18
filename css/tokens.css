@@ -88,6 +88,9 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
+/* CMS text fields that may span multiple lines: each line becomes a row */
+.multiline { white-space: pre-line; }
+
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;

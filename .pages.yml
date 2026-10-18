@@ -11,6 +11,14 @@ content:
       - name: hero_subtitle
         label: Ondertitel (bovenaan de pagina)
         type: text
+      - name: notice_title
+        label: "Mededeling: kopje (optioneel)"
+        description: "Vrij te kiezen, bijv. 'Belangrijk' of 'Let op'. Verschijnt in een rood blok onder de knoppen bovenaan de homepage. Laat leeg voor geen kopje."
+        type: string
+      - name: notice
+        label: "Mededeling: tekst (optioneel)"
+        description: "Vrij te kiezen tekst, meerdere regels mogelijk, bijv. 'Sorry! Wij zijn van 1 t/m 14 augustus gesloten.' Laat kopje én tekst leeg om het rode blok te verbergen."
+        type: text
       - name: location_title
         label: "Titel contactsectie (bijv. 'Bezoek of bel ons')"
         type: string
@@ -29,10 +37,12 @@ content:
         description: "Wordt automatisch een klikbare e-maillink."
         type: string
       - name: hours_weekday
-        label: "Openingstijden (bijv. 'Ma–Vr: 08:30–17:00')"
-        type: string
+        label: Openingstijden
+        description: "Eén regel per set dagen, bijv. 'Ma–Do: 09:00–17:00' en op de volgende regel 'Vr: 09:00–15:00'. Wordt getoond op de homepage en onderaan elke pagina."
+        type: text
       - name: hours_weekend
         label: "Openingstijden weekend (bijv. 'Za–Zo: Gesloten')"
+        description: "Wordt getoond op de homepage en onderaan elke pagina."
         type: string
       - name: services_title
         label: "Titel 'Onze zorg' sectie"
@@ -123,6 +133,8 @@ content:
             label: Foto
             description: "Optioneel. Zonder foto wordt een gekleurde cirkel met initialen getoond."
             type: image
+            options:
+              media: team
 
   - name: treatments
     label: Behandelingen Pagina
@@ -148,6 +160,12 @@ content:
           - name: title
             label: Titel
             type: string
+          - name: icon
+            label: Icoon (optioneel)
+            description: "Wordt als cirkel vóór de titel getoond. Gebruik bij voorkeur een vierkante afbeelding. Zonder icoon wordt alleen de titel getoond."
+            type: image
+            options:
+              media: icons
           - name: intro
             label: Introductietekst
             type: text
@@ -247,5 +265,11 @@ content:
                 list: true
 
 media:
-  input: images/team
-  output: images/team
+  - name: team
+    label: Teamfoto's
+    input: images/team
+    output: images/team
+  - name: icons
+    label: Iconen behandelingen
+    input: images/icons
+    output: images/icons
