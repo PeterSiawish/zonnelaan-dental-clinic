@@ -29,7 +29,7 @@ content:
         description: "Wordt automatisch een klikbare e-maillink."
         type: string
       - name: hours_weekday
-        label: "Openingstijden doordeweeks (bijv. 'Ma–Vr: 08:30–17:00')"
+        label: "Openingstijden (bijv. 'Ma–Vr: 08:30–17:00')"
         type: string
       - name: hours_weekend
         label: "Openingstijden weekend (bijv. 'Za–Zo: Gesloten')"

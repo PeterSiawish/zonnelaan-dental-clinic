@@ -1,5 +1,5 @@
 (function () {
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpgagdl";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xoejblgk";
 
   document.addEventListener("DOMContentLoaded", () => {
     fetch("./content/register.json")
@@ -12,22 +12,27 @@
         if (subtitle && data.subtitle) subtitle.textContent = data.subtitle;
 
         const nameLabel = document.querySelector(".js-name-label");
-        if (nameLabel && data.name_label) nameLabel.textContent = data.name_label;
+        if (nameLabel && data.name_label)
+          nameLabel.textContent = data.name_label;
 
         const emailLabel = document.querySelector(".js-email-label");
-        if (emailLabel && data.email_label) emailLabel.textContent = data.email_label;
+        if (emailLabel && data.email_label)
+          emailLabel.textContent = data.email_label;
 
         const bsnLabel = document.querySelector(".js-bsn-label");
         if (bsnLabel && data.bsn_label) bsnLabel.textContent = data.bsn_label;
 
         const phoneLabel = document.querySelector(".js-phone-label");
-        if (phoneLabel && data.phone_label) phoneLabel.textContent = data.phone_label;
+        if (phoneLabel && data.phone_label)
+          phoneLabel.textContent = data.phone_label;
 
         const consentText = document.querySelector(".js-consent-text");
-        if (consentText && data.consent_text) consentText.textContent = data.consent_text;
+        if (consentText && data.consent_text)
+          consentText.textContent = data.consent_text;
 
         const submitLabel = document.querySelector(".js-submit-label");
-        if (submitLabel && data.submit_label) submitLabel.textContent = data.submit_label;
+        if (submitLabel && data.submit_label)
+          submitLabel.textContent = data.submit_label;
       });
 
     const form = document.getElementById("register-form");
