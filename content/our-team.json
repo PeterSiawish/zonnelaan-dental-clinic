@@ -3,33 +3,34 @@
   "subtitle": "Maak kennis met de tandartsen en mondhygiënisten van Tandartsenpraktijk Zonnelaan.",
   "doctors": [
     {
-      "name": "Peter",
-      "role": "Tandarts / Dentist",
+      "name": "Ramez Seawish",
+      "role": "Tandarts / Dentist / Eigenaar",
       "license_type": "BIG",
-      "license_number": "PLACEHOLDER-BIG-00000001",
-      "specializations": "Algemene tandheelkunde, Endodontologie",
+      "license_number": "69910113002",
+      "specializations": "Algemene tandheelkunde",
       "languages": "Nederlands, Engels",
       "bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben.",
-      "photo": "images/team/Screenshot 2026-09-06 220227.png"
+      "photo": "images/team/ramez.jpeg"
     },
     {
-      "name": "Mr. Jason",
+      "name": "Harm",
       "role": "Tandarts / Angsttandarts",
       "license_type": "BIG",
       "license_number": "PLACEHOLDER-BIG-00000002",
       "specializations": "Angstbegeleiding, Cosmetische tandheelkunde",
       "languages": "Nederlands, Engels, Duits",
       "bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken.",
-      "photo": "images/team/Screenshot 2026-09-06 220657.png"
+      "photo": "images/team/Harm.jpeg"
     },
     {
-      "name": "Drs. Fatima El Amrani",
+      "name": "Nita",
       "role": "Tandarts / Implantologie",
       "license_type": "BIG",
       "license_number": "PLACEHOLDER-BIG-00000004",
       "specializations": "Implantologie, Restauratieve tandheelkunde",
-      "languages": "Nederlands, Engels, Arabisch",
-      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen."
+      "languages": "Nederlands, Engels",
+      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen.",
+      "photo": "images/team/Nita.jpeg"
     }
   ]
 }
