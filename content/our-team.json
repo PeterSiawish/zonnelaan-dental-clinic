@@ -3,34 +3,38 @@
   "subtitle": "Maak kennis met de tandartsen en mondhygiënisten van Tandartsenpraktijk Zonnelaan.",
   "doctors": [
     {
-      "name": "Ramez Seawish",
-      "role": "Tandarts / Dentist / Eigenaar",
+      "name": "Drs. Ramez Seawish",
+      "role": "Tandarts / Eigenaar",
       "license_type": "BIG",
       "license_number": "69910113002",
       "specializations": "Algemene tandheelkunde",
-      "languages": "Nederlands, Engels",
-      "bio": "Sanne is sinds 2012 werkzaam als tandarts en richt zich op een persoonlijke, rustige benadering, ideaal voor patiënten die wat extra geruststelling nodig hebben.",
+      "languages": "Nederlands / Engels ",
       "photo": "images/team/ramez.jpeg"
     },
     {
-      "name": "Harm",
-      "role": "Tandarts / Angsttandarts",
+      "name": "Drs. Harm Broekema",
+      "role": "Tandarts ",
       "license_type": "BIG",
-      "license_number": "PLACEHOLDER-BIG-00000002",
-      "specializations": "Angstbegeleiding, Cosmetische tandheelkunde",
+      "license_number": "0123456778",
+      "specializations": "Algemene tandheelkunde",
       "languages": "Nederlands, Engels, Duits",
-      "bio": "Mark heeft zich gespecialiseerd in de begeleiding van angstige patiënten en werkt nauw samen met het team om behandelingen zo comfortabel mogelijk te maken.",
       "photo": "images/team/Harm-2.jpeg"
     },
     {
-      "name": "Nita",
-      "role": "Tandarts / Implantologie",
-      "license_type": "BIG",
-      "license_number": "PLACEHOLDER-BIG-00000004",
-      "specializations": "Implantologie, Restauratieve tandheelkunde",
+      "name": "Nita ",
+      "role": "tandartsassistente / preventieassistente",
       "languages": "Nederlands, Engels",
-      "bio": "Fatima combineert precisie met een warme, toegankelijke stijl van zorg en heeft een bijzondere interesse in implantaatbehandelingen.",
       "photo": "images/team/Nita.jpeg"
+    },
+    {
+      "name": "Gioia Klijn",
+      "role": "Mondhygiëne / preventie",
+      "languages": "Nederlands / Engels /Duits"
+    },
+    {
+      "name": "Sophia Nooij",
+      "role": "Tandartsassistente I.O.",
+      "languages": "Nederlands / Engels"
     }
   ]
 }
