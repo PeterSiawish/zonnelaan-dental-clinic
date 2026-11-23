@@ -18,6 +18,71 @@
         "Sealen (aanbrengen van een beschermlaagje in groeven van kiezen)",
         "Gebitsbeschermer (sportbitje) aanmeten"
       ]
+    },
+    {
+      "title": "Diagnostiek",
+      "items": [
+        "Bitewing-foto's (kleine controlefoto's van kiezen)",
+        "Solo-foto (kleine foto van één specifieke tand of kies)",
+        "Orthopantomogram / OPT (overzichtsfoto van de gehele kaak)",
+        "Schedelfoto (RSP)"
+      ]
+    },
+    {
+      "title": "Restauratief",
+      "items": [
+        "Etsen en aanbrengen van hechtlaag",
+        "Vulling van composiet (witte vulling, één- of meervlaks)",
+        "Vulling van glasionomeer",
+        "Vulling van amalgaam (wordt nog zelden gebruikt)",
+        "Noodvulling aanbrengen",
+        "Polijsten van bestaande vullingen",
+        "Opbouw van een zwaar beschadigde tand of kies",
+        "Wortelstift plaatsen (ter ondersteuning van een vulling of kroon)",
+        "Starten van een wortelkanaalbehandeling (pijnklacht verhelpen / zenuw openen)",
+        "Volledige wortelkanaalbehandeling (één- of meerkanalig)",
+        "Herbehandeling van een eerder gevuld wortelkanaal",
+        "Verwijderen van een afgebroken instrument of wortelstift uit het kanaal",
+        "Inwendig bleken van een dode, verkleurde tand",
+        "Wortelpuntbehandeling (apexresectie, vaak door kaakchirurg maar soms in de praktijk)"
+      ]
+    },
+    {
+      "title": "Kroon - en Brugwerk",
+      "items": [
+        "Kroon (porselein, zirkonium, metaal-porselein of goud)",
+        "Brug (meerdere gekoppelde kronen ter vervanging van ontbrekende tanden)",
+        "Etsbrug (plakbrug zonder veel te slijpen aan buurtanden)",
+        "Inlay of onlay (gegoten of gefreesde gedeeltelijke kroon)",
+        "Noodkroon of noodbrug plaatsen",
+        "Opnieuw vastzetten van een losgeraakte kroon of brug",
+        "Verwijderen van een oude kroon of brug"
+      ]
+    },
+    {
+      "title": "Tandvleesbehandelingen (Parodontologie)",
+      "items": [
+        "DPSI-score bepalen (tandvleescheck)",
+        "Parodontiumstatus opstellen (meten van alle pockets rondom tanden)",
+        "Initiële parodontale behandeling (dieptereiniging onder het tandvlees / rootplaning)",
+        "Herbeoordeling van het tandvlees",
+        "Nazorg-consult parodontologie",
+        "Flap-operatie (chirurgische tandvleesreiniging)",
+        "Tandvleescorrectie (gingivectomie of kroonverlenging)",
+        "Spalken van losstaande tanden"
+      ]
+    },
+    {
+      "title": "Chirurgische ingrepen",
+      "items": [
+        "Trekken van een tand of kies (extractie)",
+        "Moeilijke extractie (bijvoorbeeld bij afgebroken wortels of vastzittende kiezen)",
+        "Verwijderen van een verstandskies",
+        "Hechten van een wond en wondcontrole",
+        "Incisie en drainage van een abces (pus ontlasten)",
+        "Vrijleggen van een niet-doorgebroken tand",
+        "Verwijderen van een lip- of tongriempje (frenulectomie)"
+      ]
     }
   ]
 }
