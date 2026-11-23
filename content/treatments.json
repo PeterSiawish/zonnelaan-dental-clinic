@@ -83,6 +83,59 @@
         "Vrijleggen van een niet-doorgebroken tand",
         "Verwijderen van een lip- of tongriempje (frenulectomie)"
       ]
+    },
+    {
+      "title": "Kunstgebitten en protheses",
+      "items": [
+        "Volledig kunstgebit (boven- en/of onderkaak)",
+        "Gedeeltelijke prothese (kunststof plaatje)",
+        "Frameprothese (metalen frame met kunsttanden)",
+        "Klikgebit (overkappingsprothese op implantaten)",
+        "Immediaatprothese (noodkunstgebit direct na het trekken van tanden)",
+        "Rebasen (opvullen van een loszittend kunstgebit)",
+        "Reparatie van een gebroken kunstgebit of toevoegen van een tand"
+      ]
+    },
+    {
+      "title": "Implantologie",
+      "items": [
+        "Vooronderzoek en planning voor implantaten",
+        "Plaatsen van een implantaat (kunstwortel)",
+        "Botopbouw (indien er te weinig kaakbot is)",
+        "Sinuslift (ophogen van de bijholte in de bovenkaak)",
+        "Plaatsen van een kroon, brug of klikgebit op implantaten",
+        "Behandeling van ontsteking rondom een implantaat (peri-implantitis)"
+      ]
+    },
+    {
+      "title": "Kaakgewricht en slapen (gnathologie)",
+      "items": [
+        "Onderzoek naar kaakklachten (CMD / TMD)",
+        "Opbeetplaat / knarsbitje (splint) tegen tandenknarsen en klemmen",
+        "Anti-snurkbeugel (MRA) tegen snurken en slaapapneu",
+        "Inslijpen van het gebit bij verkeerde beet"
+      ]
+    },
+    {
+      "title": "Esthetische tandheelkunde",
+      "items": [
+        "Uitwendig tanden bleken (thuisbleekset of in de stoel)",
+        "Facing van composiet (schildje aan de voorkant van de tand)",
+        "Facing van porselein",
+        "Sluiten van spleetjes tussen tanden (diasteem)",
+        "Tandkristal / tandsieraad plaatsen"
+      ]
+    },
+    {
+      "title": "Orthodontie (indien aangeboden door de tandarts)",
+      "items": [
+        "Orthodontisch vooronderzoek",
+        "Slotjesbeugel (vaste apparatuur)",
+        "Doorzichtige aligners (bijv. Invisalign)",
+        "Uitneembare beugel (blokbeugel of plaatapparatuur)",
+        "Retentiespalk plaatsen (draadje achter de tanden na een beugel)",
+        "Nachtbeugel (retainer)"
+      ]
     }
   ]
 }
