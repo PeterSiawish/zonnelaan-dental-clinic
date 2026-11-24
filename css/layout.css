@@ -49,17 +49,23 @@ main {
   text-decoration: none;
   color: var(--text);
   font-weight: 700;
-  font-size: 1.1rem;
-  margin-right: auto;
+  font-size: 1rem;
+  line-height: 1.25;
+  /* Take the free space (pushing nav/hamburger right) but allow shrinking,
+     so on narrow phones the name wraps to two lines instead of pushing the
+     hamburger button onto its own row. */
+  flex: 1 1 0;
+  min-width: 0;
 }
 .brand:hover {
   color: var(--primary-dark);
 }
+/* Full logo, never cropped: fixed height, width follows the image's own
+   proportions (width/height attributes on the <img> reserve the space). */
 .brand-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
+  display: block;
+  height: 44px;
+  width: auto;
   flex-shrink: 0;
 }
 
@@ -148,7 +154,27 @@ main {
   padding: var(--space-2) var(--space-1);
 }
 
+/* Very narrow phones (e.g. 320px): "Tandartsenpraktijk" can't wrap
+   mid-word, so shrink logo + name slightly to keep clear of the hamburger. */
+@media (max-width: 359px) {
+  .brand {
+    font-size: 0.9rem;
+  }
+  .brand-mark {
+    height: 38px;
+  }
+}
+
+@media (min-width: 600px) {
+  .brand {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 900px) {
+  .brand-mark {
+    height: 56px;
+  }
   .nav-list {
     display: flex;
   }
