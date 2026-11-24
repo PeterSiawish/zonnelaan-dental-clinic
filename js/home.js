@@ -2,7 +2,13 @@
    content/index.json (opening hours are handled by js/opening-hours.js), and
    clones up to 4 doctor cards from content/our-team.json's "doctors" array
    (same source as team.html) into #staff-preview-grid using
-   #staff-preview-card-template. */
+   #staff-preview-card-template.
+
+   The 4 "Onze zorg" cards mirror the first 4 categories of
+   content/treatments.json: title and link (treatments.html#<id>, which opens
+   that accordion item) come from the category, the short text from
+   content/index.json's service_N_text. An empty service_N_text falls back to
+   a sentence built from the category's first treatments. */
 (function () {
   var TITLE_WORD = /^(drs\.?|dr\.?|prof\.?|mevr\.?|mr\.?)$/i;
 
@@ -50,22 +56,69 @@
     "address",
     "services-title",
     "services-subtitle",
-    "service-1-title",
-    "service-1-text",
-    "service-2-title",
-    "service-2-text",
-    "service-3-title",
-    "service-3-text",
-    "service-4-title",
-    "service-4-text",
     "team-title",
     "team-subtitle",
   ];
 
-  fetch("./content/index.json")
-    .then(function (r) {
+  function getJSON(url) {
+    return fetch(url).then(function (r) {
       return r.json();
-    })
+    });
+  }
+
+  // "Periodieke controle (halfjaarlijks)" -> "Periodieke controle";
+  // "Eerste consult / uitgebreid onderzoek" -> "Eerste consult of uitgebreid onderzoek".
+  function cleanItem(item) {
+    return (item || "")
+      .replace(/\s*\([^)]*\)/g, "")
+      .replace(/\s*\/\s*/g, " of ")
+      .trim();
+  }
+
+  // First 3 treatments as one sentence: "A, b en c."
+  function fallbackSentence(category) {
+    var items = (category.items || []).map(cleanItem).filter(Boolean).slice(0, 3);
+    if (items.length === 0) return "";
+    items = items.map(function (item, i) {
+      return i === 0 ? item : item.charAt(0).toLowerCase() + item.slice(1);
+    });
+    var last = items.pop();
+    return (items.length ? items.join(", ") + " en " + last : last) + ".";
+  }
+
+  function fillServiceCards(homeData, treatmentsData) {
+    var cards = document.querySelectorAll(".js-service-card");
+    var categoryId = window.ZonnelaanAccordion && window.ZonnelaanAccordion.categoryId;
+    if (!cards.length || !categoryId) return;
+
+    var categories = [];
+    (treatmentsData.categories || []).forEach(function (category, i) {
+      // Same filter as js/treatments.js, keeping the original index so the
+      // generated id matches the one on treatments.html.
+      if (category.title) categories.push({ category: category, index: i });
+    });
+
+    Array.prototype.forEach.call(cards, function (card, n) {
+      var entry = categories[n];
+      card.hidden = !entry;
+      if (!entry) return;
+      var text = (homeData["service_" + (n + 1) + "_text"] || "").trim();
+      card.href = "treatments.html#" + categoryId(entry.category, entry.index);
+      card.querySelector(".js-service-title").textContent = entry.category.title.trim();
+      card.querySelector(".js-service-text").textContent =
+        text || fallbackSentence(entry.category);
+    });
+  }
+
+  var homeData = getJSON("./content/index.json");
+
+  Promise.all([homeData, getJSON("./content/treatments.json")]).then(
+    function (results) {
+      fillServiceCards(results[0] || {}, results[1] || {});
+    }
+  );
+
+  homeData
     .then(function (data) {
       TEXT_FIELDS.forEach(function (field) {
         var el = document.querySelector(".js-" + field);
@@ -95,10 +148,7 @@
       }
     });
 
-  fetch("./content/our-team.json")
-    .then(function (r) {
-      return r.json();
-    })
+  getJSON("./content/our-team.json")
     .then(function (data) {
       var grid = document.getElementById("staff-preview-grid");
       var template = document.getElementById("staff-preview-card-template");

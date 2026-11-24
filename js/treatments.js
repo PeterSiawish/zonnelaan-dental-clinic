@@ -1,17 +1,11 @@
 /* Clones content/treatments.json's "categories" array into one accordion
    item per entry on treatments.html, using #treatment-category-template as
-   the markup source. */
+   the markup source. Element ids come from ZonnelaanAccordion.categoryId()
+   (js/accordion.js) so links from the homepage cards always match. */
 (function () {
-  function slugify(text) {
-    return (text || "")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/(^-|-$)/g, "");
-  }
-
   function buildCategory(category, index, template) {
     var node = template.content.firstElementChild.cloneNode(true);
-    var slug = category.slug || slugify(category.title) || "cat-" + index;
+    var slug = window.ZonnelaanAccordion.categoryId(category, index);
 
     node.id = slug;
     var header = node.querySelector(".accordion-header");

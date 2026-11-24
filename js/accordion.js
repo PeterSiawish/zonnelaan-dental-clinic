@@ -8,10 +8,31 @@
 
    expandFromHash() is exposed on window.ZonnelaanAccordion so treatments.js
    can re-run it once its cards exist in the DOM (this script's own
-   DOMContentLoaded-time call runs too early to see them). */
+   DOMContentLoaded-time call runs too early to see them). Because those
+   cards are added after page load, the browser's own jump-to-#hash has
+   already missed them, so expandFromHash() also scrolls the item into view.
+
+   categoryId() is the single source of truth for a treatment category's
+   element id: treatments.js uses it to set the id, home.js uses it to build
+   the "Onze zorg" card links (treatments.html#<id>). */
 (function () {
+  function slugify(text) {
+    return (text || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+  }
+
+  function categoryId(category, index) {
+    return (
+      (category.slug || "").trim() ||
+      slugify(category.title) ||
+      "cat-" + index
+    );
+  }
+
   function expandFromHash() {
-    var hash = window.location.hash.replace("#", "");
+    var hash = decodeURIComponent(window.location.hash.replace("#", ""));
     var target = hash && document.getElementById(hash);
     if (!target || !target.classList.contains("accordion-item")) return;
     var header = target.querySelector(".accordion-header");
@@ -20,9 +41,20 @@
       header.setAttribute("aria-expanded", "true");
       panel.removeAttribute("hidden");
     }
+    // Jump straight there, like a normal #anchor on page load, instead of
+    // the site-wide smooth scrolling (css/tokens.css). Done by toggling the
+    // CSS property rather than behavior: "instant" for older Safari.
+    var root = document.documentElement;
+    var previous = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    target.scrollIntoView(true);
+    root.style.scrollBehavior = previous;
   }
 
-  window.ZonnelaanAccordion = { expandFromHash: expandFromHash };
+  window.ZonnelaanAccordion = {
+    expandFromHash: expandFromHash,
+    categoryId: categoryId,
+  };
 
   document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (e) {
@@ -40,7 +72,7 @@
     });
 
     // Auto-expand the category linked to from the home page services section
-    // (e.g. treatments.html#cat1). No-ops here on pages whose accordion
+    // (e.g. treatments.html#preventief). No-ops here on pages whose accordion
     // content is rendered asynchronously (treatments.html) since the
     // matching element doesn't exist yet at DOMContentLoaded time; that
     // page calls expandFromHash() again itself once rendering is done.

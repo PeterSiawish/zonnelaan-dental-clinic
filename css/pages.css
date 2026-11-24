@@ -78,6 +78,8 @@
   color: var(--text);
   text-decoration: none;
 }
+/* js/home.js hides a card when there are fewer than 4 treatment categories. */
+.service-card[hidden] { display: none; }
 .service-card h3 {
   margin-bottom: var(--space-2);
   color: var(--primary);

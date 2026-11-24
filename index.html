@@ -39,18 +39,18 @@
               </a>
             </li>
             <li>
-              <a class="nav-link" href="team.html">Ons Team</a>
-            </li>
-            <li>
               <a class="nav-link" href="treatments.html">Behandelingen</a>
-            </li>
-            <li>
-              <a class="nav-link" href="register.html">Inschrijven</a>
             </li>
             <li>
               <a class="nav-link" href="patient-information.html">
                 Patiënteninformatie
               </a>
+            </li>
+            <li>
+              <a class="nav-link" href="team.html">Ons Team</a>
+            </li>
+            <li>
+              <a class="nav-link" href="register.html">Inschrijven</a>
             </li>
           </ul>
         </nav>
@@ -81,18 +81,18 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="team.html">Ons Team</a>
-          </li>
-          <li>
             <a class="nav-link" href="treatments.html">Behandelingen</a>
-          </li>
-          <li>
-            <a class="nav-link" href="register.html">Inschrijven</a>
           </li>
           <li>
             <a class="nav-link" href="patient-information.html">
               Patiënteninformatie
             </a>
+          </li>
+          <li>
+            <a class="nav-link" href="team.html">Ons Team</a>
+          </li>
+          <li>
+            <a class="nav-link" href="register.html">Inschrijven</a>
           </li>
         </ul>
       </nav>
@@ -193,36 +193,40 @@
             Van preventie tot specialistische behandelingen, helder uitgelegd.
           </p>
 
+          <!-- Title + link follow the first 4 categories of
+               content/treatments.json, text comes from service_N_text in
+               content/index.json; both filled in by js/home.js. The markup
+               below is only the fallback before the content loads. -->
           <div class="card-grid card-grid--4">
-            <a class="card service-card" href="treatments.html#cat1">
-              <h3 class="js-service-1-title">Preventieve Zorg</h3>
-              <p class="js-service-1-text">
-                Periodieke controles, gebitsreiniging en preventieve begeleiding
-                om problemen voor te blijven.
+            <a class="card service-card js-service-card" href="treatments.html#preventief">
+              <h3 class="js-service-title">Preventief</h3>
+              <p class="js-service-text">
+                Halfjaarlijkse controles, een uitgebreid eerste consult en een
+                spoedconsult wanneer u klachten heeft.
               </p>
               <span>Lees meer</span>
             </a>
-            <a class="card service-card" href="treatments.html#cat2">
-              <h3 class="js-service-2-title">Restauratief & Cosmetisch</h3>
-              <p class="js-service-2-text">
-                Vullingen, kronen, bruggen en cosmetische behandelingen zoals
-                bleken en facings.
+            <a class="card service-card js-service-card" href="treatments.html#diagnostiek">
+              <h3 class="js-service-title">Diagnostiek</h3>
+              <p class="js-service-text">
+                Kleine controlefoto's van uw kiezen, een gerichte foto van één
+                tand of kies en een overzichtsfoto van de gehele kaak.
               </p>
               <span>Lees meer</span>
             </a>
-            <a class="card service-card" href="treatments.html#cat3">
-              <h3 class="js-service-3-title">Specialistische Zorg</h3>
-              <p class="js-service-3-text">
-                Wortelkanaalbehandelingen, parodontologie en implantologie voor
-                complexere zorg.
+            <a class="card service-card js-service-card" href="treatments.html#restauratief">
+              <h3 class="js-service-title">Restauratief</h3>
+              <p class="js-service-text">
+                Wij herstellen tanden en kiezen met witte composietvullingen of
+                glasionomeer, stevig verankerd met een hechtlaag.
               </p>
               <span>Lees meer</span>
             </a>
-            <a class="card service-card" href="treatments.html#cat4">
-              <h3 class="js-service-4-title">Angstpatiënten (Angsttandarts)</h3>
-              <p class="js-service-4-text">
-                Rustige, stapsgewijze begeleiding voor patiënten die extra
-                geruststelling nodig hebben.
+            <a class="card service-card js-service-card" href="treatments.html#kroon-en-brugwerk">
+              <h3 class="js-service-title">Kroon- en brugwerk</h3>
+              <p class="js-service-text">
+                Kronen van porselein, zirkonium of goud, en bruggen of plakbruggen
+                die ontbrekende tanden vervangen.
               </p>
               <span>Lees meer</span>
             </a>
@@ -296,14 +300,14 @@
         <div>
           <h3>Snel naar</h3>
           <ul>
-            <li><a href="team.html">Ons Team</a></li>
             <li>
               <a href="treatments.html">Behandelingen</a>
             </li>
-            <li><a href="register.html">Inschrijven</a></li>
             <li>
               <a href="patient-information.html">Patiënteninformatie</a>
             </li>
+            <li><a href="team.html">Ons Team</a></li>
+            <li><a href="register.html">Inschrijven</a></li>
           </ul>
         </div>
       </div>

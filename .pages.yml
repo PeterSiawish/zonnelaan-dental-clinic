@@ -1,7 +1,7 @@
 content:
   - name: home
     label: Homepage
-    description: "Beheer hier de teksten op de homepage: welkomsttekst, contactgegevens, de 'Onze zorg' kaarten en de introtekst bij 'Ons Team'. De teamleden zelf worden beheerd via 'Ons Team Pagina' hieronder."
+    description: "Beheer hier de teksten op de homepage: welkomsttekst, contactgegevens, de 'Onze zorg' kaarten en de introtekst bij 'Ons Team'. De 4 'Onze zorg' kaarten tonen automatisch de eerste 4 categorieën van de 'Behandelingen Pagina' (titel en link); hier beheert u alleen de korte tekst per kaart. De teamleden zelf worden beheerd via 'Ons Team Pagina'."
     type: file
     path: content/index.json
     fields:
@@ -50,33 +50,21 @@ content:
       - name: services_subtitle
         label: "Introductietekst 'Onze zorg' sectie"
         type: text
-      - name: service_1_title
-        label: Kaart 1 titel
-        description: "Deze kaart linkt altijd naar Behandelingen > cat1 (Preventieve Zorg). De link zelf is niet aanpasbaar via de CMS."
-        type: string
       - name: service_1_text
-        label: Kaart 1 tekst
+        label: "'Onze zorg' kaart 1: tekst"
+        description: "Korte zin over de eerste categorie op de Behandelingen pagina. De titel en de link van deze kaart worden automatisch overgenomen van die categorie; verandert u de volgorde van de categorieën, pas dan ook deze tekst aan. Laat leeg om automatisch een zin te maken uit de eerste behandelingen."
         type: text
-      - name: service_2_title
-        label: Kaart 2 titel
-        description: "Deze kaart linkt altijd naar Behandelingen > cat2. De link zelf is niet aanpasbaar via de CMS."
-        type: string
       - name: service_2_text
-        label: Kaart 2 tekst
+        label: "'Onze zorg' kaart 2: tekst"
+        description: "Korte zin over de tweede categorie op de Behandelingen pagina. De titel en de link van deze kaart worden automatisch overgenomen van die categorie; verandert u de volgorde van de categorieën, pas dan ook deze tekst aan. Laat leeg om automatisch een zin te maken uit de eerste behandelingen."
         type: text
-      - name: service_3_title
-        label: Kaart 3 titel
-        description: "Deze kaart linkt altijd naar Behandelingen > cat3. De link zelf is niet aanpasbaar via de CMS."
-        type: string
       - name: service_3_text
-        label: Kaart 3 tekst
+        label: "'Onze zorg' kaart 3: tekst"
+        description: "Korte zin over de derde categorie op de Behandelingen pagina. De titel en de link van deze kaart worden automatisch overgenomen van die categorie; verandert u de volgorde van de categorieën, pas dan ook deze tekst aan. Laat leeg om automatisch een zin te maken uit de eerste behandelingen."
         type: text
-      - name: service_4_title
-        label: Kaart 4 titel
-        description: "Deze kaart linkt altijd naar Behandelingen > cat4. De link zelf is niet aanpasbaar via de CMS."
-        type: string
       - name: service_4_text
-        label: Kaart 4 tekst
+        label: "'Onze zorg' kaart 4: tekst"
+        description: "Korte zin over de vierde categorie op de Behandelingen pagina. De titel en de link van deze kaart worden automatisch overgenomen van die categorie; verandert u de volgorde van de categorieën, pas dan ook deze tekst aan. Laat leeg om automatisch een zin te maken uit de eerste behandelingen."
         type: text
       - name: team_title
         label: "Titel 'Ons Team' sectie"
@@ -84,57 +72,6 @@ content:
       - name: team_subtitle
         label: "Introductietekst 'Ons Team' sectie"
         type: text
-
-  - name: our_team
-    label: Ons Team Pagina
-    description: "Beheer hier de gegevens van elk teamlid zoals ze op de 'Ons Team' pagina verschijnen."
-    type: file
-    path: content/our-team.json
-    fields:
-      - name: title
-        label: Paginatitel
-        description: "De grote titel bovenaan de 'Ons Team' pagina."
-        type: string
-      - name: subtitle
-        label: Introductietekst (onder de titel)
-        type: text
-      - name: doctors
-        label: Teamleden
-        type: object
-        list: true
-        fields:
-          - name: name
-            label: Naam
-            type: string
-          - name: role
-            label: Functie
-            type: string
-          - name: license_type
-            label: Type registratie
-            description: "BIG voor tandartsen, KRT voor mondhygiënisten"
-            type: select
-            options:
-              values: ["BIG", "KRT"]
-          - name: license_number
-            label: Registratienummer
-            type: string
-          - name: specializations
-            label: Specialisaties
-            description: "Komma-gescheiden, bijv. 'Algemene tandheelkunde, Endodontologie'"
-            type: string
-          - name: languages
-            label: Talen
-            description: "Komma-gescheiden, bijv. 'Nederlands, Engels'"
-            type: string
-          - name: bio
-            label: Samenvatting
-            type: text
-          - name: photo
-            label: Foto
-            description: "Optioneel. Zonder foto wordt een gekleurde cirkel met initialen getoond."
-            type: image
-            options:
-              media: team
 
   - name: treatments
     label: Behandelingen Pagina
@@ -175,41 +112,9 @@ content:
             type: string
             list: true
           - name: slug
-            label: "Sprong-link vanaf homepage (optioneel, meestal niet nodig)"
-            description: "Laat dit veld leeg — er wordt dan automatisch een technische naam gemaakt op basis van de titel. Vul dit alleen in als een knop op de homepage rechtstreeks naar déze categorie moet springen en die al opengeklapt moet tonen. De 4 bestaande homepage-knoppen gebruiken hiervoor cat1, cat2, cat3 en cat4 — die waarden dus niet hergebruiken voor een nieuwe categorie."
+            label: "Technische naam voor links (optioneel, meestal niet nodig)"
+            description: "Laat dit veld leeg — er wordt dan automatisch een technische naam gemaakt op basis van de titel (bijv. 'preventief'). Let op: de eerste 4 categorieën in deze lijst verschijnen automatisch als kaarten in 'Onze zorg' op de homepage en openen bij klikken deze categorie. De volgorde van de categorieën bepaalt dus welke kaarten er op de homepage staan."
             type: string
-
-  - name: register
-    label: Inschrijven Pagina
-    description: "Beheer hier de titel, introductietekst, veldlabels, toestemmingstekst en knoptekst van het inschrijfformulier."
-    type: file
-    path: content/register.json
-    fields:
-      - name: title
-        label: Paginatitel
-        description: "De grote titel bovenaan de 'Inschrijven' pagina."
-        type: string
-      - name: subtitle
-        label: Introductietekst (onder de titel)
-        type: text
-      - name: name_label
-        label: "Veldlabel: Naam"
-        type: string
-      - name: email_label
-        label: "Veldlabel: E-mailadres"
-        type: string
-      - name: bsn_label
-        label: "Veldlabel: BSN"
-        type: string
-      - name: phone_label
-        label: "Veldlabel: Telefoonnummer"
-        type: string
-      - name: consent_text
-        label: Tekst bij toestemmingsvakje
-        type: text
-      - name: submit_label
-        label: Tekst op verstuur-knop
-        type: string
 
   - name: patient_information
     label: Patiënteninformatie Pagina
@@ -263,6 +168,89 @@ content:
                 description: "Eén regel per punt. Gebruik de knop om een punt toe te voegen of te verwijderen."
                 type: string
                 list: true
+
+  - name: our_team
+    label: Ons Team Pagina
+    description: "Beheer hier de gegevens van elk teamlid zoals ze op de 'Ons Team' pagina verschijnen."
+    type: file
+    path: content/our-team.json
+    fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Ons Team' pagina."
+        type: string
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
+      - name: doctors
+        label: Teamleden
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Naam
+            type: string
+          - name: role
+            label: Functie
+            type: string
+          - name: license_type
+            label: Type registratie
+            description: "BIG voor tandartsen, KRT voor mondhygiënisten"
+            type: select
+            options:
+              values: ["BIG", "KRT"]
+          - name: license_number
+            label: Registratienummer
+            type: string
+          - name: specializations
+            label: Specialisaties
+            description: "Komma-gescheiden, bijv. 'Algemene tandheelkunde, Endodontologie'"
+            type: string
+          - name: languages
+            label: Talen
+            description: "Komma-gescheiden, bijv. 'Nederlands, Engels'"
+            type: string
+          - name: bio
+            label: Samenvatting
+            type: text
+          - name: photo
+            label: Foto
+            description: "Optioneel. Zonder foto wordt een gekleurde cirkel met initialen getoond."
+            type: image
+            options:
+              media: team
+
+  - name: register
+    label: Inschrijven Pagina
+    description: "Beheer hier de titel, introductietekst, veldlabels, toestemmingstekst en knoptekst van het inschrijfformulier."
+    type: file
+    path: content/register.json
+    fields:
+      - name: title
+        label: Paginatitel
+        description: "De grote titel bovenaan de 'Inschrijven' pagina."
+        type: string
+      - name: subtitle
+        label: Introductietekst (onder de titel)
+        type: text
+      - name: name_label
+        label: "Veldlabel: Naam"
+        type: string
+      - name: email_label
+        label: "Veldlabel: E-mailadres"
+        type: string
+      - name: bsn_label
+        label: "Veldlabel: BSN"
+        type: string
+      - name: phone_label
+        label: "Veldlabel: Telefoonnummer"
+        type: string
+      - name: consent_text
+        label: Tekst bij toestemmingsvakje
+        type: text
+      - name: submit_label
+        label: Tekst op verstuur-knop
+        type: string
 
 media:
   - name: team

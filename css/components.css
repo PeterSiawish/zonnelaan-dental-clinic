@@ -82,6 +82,9 @@
   background: var(--card);
   margin-bottom: var(--space-3);
   overflow: hidden;
+  /* Keep a hash-linked item (treatments.html#preventief) clear of the
+     sticky header when it is scrolled into view. */
+  scroll-margin-top: calc(var(--header-height) + var(--space-3));
 }
 .accordion-header {
   width: 100%;
