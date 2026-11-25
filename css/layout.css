@@ -154,7 +154,7 @@ main {
   padding: var(--space-2) var(--space-1);
 }
 
-/* Very narrow phones (e.g. 320px): "Tandartsenpraktijk" can't wrap
+/* Very narrow phones (e.g. 320px): "Tandartspraktijk" can't wrap
    mid-word, so shrink logo + name slightly to keep clear of the hamburger. */
 @media (max-width: 359px) {
   .brand {
